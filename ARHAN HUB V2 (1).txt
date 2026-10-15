@@ -1135,7 +1135,7 @@ LifeTogetherTab:Button({
     Title = "ARHAN PREMIUM OUTFIT COPIER 🤩 (ONLY FOR LIFE TOGETHER ☄️)GUI✌🏻",
     Desc = "Click to open the outfit copier GUI",
     Callback = function()
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/ARHANjaveed503-a11y/ARHAN-OUTFIT-STEALER/refs/heads/main/ARHAN%20OUTFIT%20STEALER"),true))()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/ayanjaveed503-a11y/EVERYONE-SCRIPT/refs/heads/main/ARHAN%20OUTFIT%20STEALER.txt"),true))()
     end,
 })
 
