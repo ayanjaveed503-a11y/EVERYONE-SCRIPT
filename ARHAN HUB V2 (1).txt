@@ -1121,7 +1121,7 @@ SpamTab:Button({
     Title = "ARHAN SUPER SPAM 👑",
     Desc = "Click to execute the ultimate VIP Spammer!",
     Callback = function()
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/ARHANjaveed503-a11y/ARHAN-SPAM/refs/heads/main/ARHAN%20SPAM"),true))()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/ayanjaveed503-a11y/EVERYONE-SCRIPT/refs/heads/main/ARHAN%20SPAM.txt"),true))()
     end,
 })
 
