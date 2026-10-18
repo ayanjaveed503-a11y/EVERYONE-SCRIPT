@@ -47,7 +47,7 @@ window:SelectTab(1)
 infoTab:Section({ Title = "Info", Icon = "info", Opened = true })
 
 infoTab:Image({
-  Image = "https://raw.githubusercontent.com/MANASMCPE/Mikey-X-MonK-Hub/main/MonKXmikey.png",
+  Image = "https://raw.githubusercontent.com/ayanjaveed503-a11y/EVERYONE-SCRIPT/refs/heads/main/Trio%20king.png",
   AspectRatio = "16:9",
   Radius = 9,
 })
