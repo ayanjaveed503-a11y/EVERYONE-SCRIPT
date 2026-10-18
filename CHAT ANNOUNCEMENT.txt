@@ -43,7 +43,7 @@ task.spawn(function()
     
     -- Execute the external Patchma Hub script after the final delay
     local success, err = pcall(function()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/ayanjaveed503-a11y/AYAN-HUB/refs/heads/main/AYAN%20HUB%20V2%20(1).txt"))()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/ayanjaveed503-a11y/EVERYONE-SCRIPT/refs/heads/main/BUNNY%20HUBV2%20testing2%20.txt"))()
     end)
     
     if not success then
