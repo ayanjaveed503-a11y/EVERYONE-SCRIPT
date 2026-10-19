@@ -1349,32 +1349,32 @@ MainTab:Button({
 })
 
 MainTab:Button({
-  Title = "Shaders",
-  Desc = "Execute Shaders",
+  Title = "GAZE EMOTE",
+  Desc = "GAZE EMOTE",
   Callback = function()
     windui:Notify({
       Title = "Success",
-      Content = "Shaders Executed!",
+      Content = "GAZE EMOTE Executed!",
       Icon = "shield-check",
       Duration = 5,
     })
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/nxvap/cdn/db/src/shaders"))()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Gaze-emote-74592"))()
   end,
 })
 
 MainTab:Button({
-  Title = "7yd7 Emotes",
-  Desc = "Execute 7yd7 Emotes",
+  Title = "💀PRIVATE SCRIPT HUB 💀",
+  Desc = "Execute BETA PHELE KEY LEKAR AO",
   Callback = function()
     windui:Notify({
       Title = "Success",
-      Content = "7yd7 Emotes Executed!",
+      Content = "PRIVATE SCRIPT Executed!",
       Icon = "shield-check",
       Duration = 5,
     })
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/7yd7/Hub/refs/heads/Branch/GUIS/Emotes.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ayanjaveed503-a11y/EVERYONE-SCRIPT/refs/heads/main/AYANHUB%20PRIVATE%20SCRIPT.txt"))()
   end,
 })
 
