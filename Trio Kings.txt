@@ -1288,17 +1288,17 @@ MainTab:Button({
 })
 
 MainTab:Button({
-  Title = "System Broken",
-  Desc = "Execute System Broken Script",
+  Title = "ZAYN CHAT",
+  Desc = "Execute ZAYN CHAT",
   Callback = function()
     windui:Notify({
       Title = "Success",
-      Content = "System Broken Executed!",
+      Content = "ZAYN CHAT Executed!",
       Icon = "alert-triangle",
       Duration = 5,
     })
 
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-System-broken-script-32501"))()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Zayn-Chat-223768"))()
   end,
 })
 
