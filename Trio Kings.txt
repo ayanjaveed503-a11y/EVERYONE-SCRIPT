@@ -1303,17 +1303,17 @@ MainTab:Button({
 })
 
 MainTab:Button({
-  Title = "Infinite Yield",
-  Desc = "Execute IY",
+  Title = "REMOVEFIRE+ANTILAG",
+  Desc = "Execute REMOVEFIRE+ANTILAG",
   Callback = function()
     windui:Notify({
       Title = "Success",
-      Content = "Infinite Yield Executed!",
+      Content = "REMOVEFIRE+ANTILAG Executed!",
       Icon = "droplet-off",
       Duration = 5,
     })
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Extra-Antilag-(Open-source)-229552"))()
   end,
 })
 
