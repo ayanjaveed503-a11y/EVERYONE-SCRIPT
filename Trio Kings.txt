@@ -1333,17 +1333,17 @@ MainTab:Button({
 })
 
 MainTab:Button({
-  Title = "Keyboard",
-  Desc = "Execute Keyboard",
+  Title = "👑TRIO KING OUTFIT STEALER👑",
+  Desc = "Execute TRIO KING OUTFIT STEALER",
   Callback = function()
     windui:Notify({
       Title = "Success",
-      Content = "Keyboard Executed!",
+      Content = "TRIO KING OUTFIT STEALER Executed!",
       Icon = "droplet-off",
       Duration = 5,
     })
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt", true
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ayanjaveed503-a11y/AYAN-OUTFIT-STEALER/refs/heads/main/%20TRIO%20KING%20OUTFIT%20STEALER.txt", true
     ))()
   end,
 })
