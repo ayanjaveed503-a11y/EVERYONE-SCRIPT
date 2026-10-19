@@ -1273,12 +1273,12 @@ FlingTab:Toggle({
 MainTab:Section({ Title = "Scripts" })
 
 MainTab:Button({
-  Title = "FE God Mode",
-  Desc = "Execute FE God Mode",
+  Title = "TRIO KING SPAMMER",
+  Desc = "Execute TRIO KING SPAMMER",
   Callback = function()
     windui:Notify({
       Title = "Success",
-      Content = "FE God Mode Executed!",
+      Content = "TRIO KING SPAMMER Executed!",
       Icon = "shield-check",
       Duration = 5,
     })
