@@ -176,7 +176,7 @@ local LocalPlayer = Players.LocalPlayer
 
 -- LOADING SCREEN
 local loadingGui = Instance.new("ScreenGui")
-loadingGui.Name = "MonKLoader"
+loadingGui.Name = "AyanLoader"
 loadingGui.IgnoreGuiInset = true
 loadingGui.ResetOnSpawn = false
 loadingGui.DisplayOrder = 999
