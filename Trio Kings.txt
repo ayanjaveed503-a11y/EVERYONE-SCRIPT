@@ -1283,7 +1283,7 @@ MainTab:Button({
       Duration = 5,
     })
 
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-God-Mode-56305"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ayanjaveed503-a11y/EVERYONE-SCRIPT/refs/heads/main/TRIO%20SPAM%20.txt"))()
   end,
 })
 
