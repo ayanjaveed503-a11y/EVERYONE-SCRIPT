@@ -1,4 +1,4 @@
--- Delta Multi Player Spammer - Made by AYAN (Ultimate RGB God Edition V2)
+-- Delta Multi Player Spammer - Made by AYAN (Ultimate Biy Core Edition V3)
 local ScreenGui = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local BackgroundImage = Instance.new("ImageLabel")
@@ -21,22 +21,53 @@ local AutoToggleBtn = Instance.new("TextButton")
 local ManualContainer = Instance.new("Frame")
 local UIListLayout = Instance.new("UIListLayout")
 
--- [NEW GUI CONTROLS] Anti-AFK Status Counting Label
+-- [NEW BIY UTILITIES] Anti-AFK & Anti-Fling Toggles with Timers
+local AntiAfkToggleBtn = Instance.new("TextButton")
+local AntiFlingToggleBtn = Instance.new("TextButton")
+local AntiAfkTimerLabel = Instance.new("TextLabel")
 local AntiAfkCountLabel = Instance.new("TextLabel")
-local afkCounterValue = 0
 
--- Main Frame Properties (Adjusted height for the new counter label slot)
+local afkCounterValue = 0
+local startTimeRef = os.time()
+local antiAfkActive = true
+local antiFlingActive = true
+
+-- 5 Heavy Padding Patterns
+local PaddingsList = {
+    " ______________________________________________________________", 
+    " - _ - _ - _ - _ - _ - _ - _ - _ - _ - _-- _ - _ - _ - _ - _ - ", 
+    " o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|",         
+    " (!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)", 
+    " @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=" 
+}
+
+-- Default Roast Lines from source content
+local CustomRoastLines = {
+    " TMX 🔮☄️ MAI TOXIC KA AYAN😝TAP KARKE BOL AYAN PAPA OP✌🏻 🔮☄️",
+    "👑🔥 tmx AYAN PAPA GODZILA POWER SONIC BEEM UNLEASHED 1000% MAXIMUM DESTRUCTION OVERLOAD 🔥👑",
+    "🦍⚡ tmx AYAN PAPA SUPER ULTRA BRAZIL TIGER GORILLA PUNCH CRUSHING THE WHOLE SERVER ⚡🦍",
+    "💥☀️ tmx AYAN PAPA MEGA POWER WAVE TSUNAMI BLAST ACTIVATED ACROSS ALL DIMENSIONS ☀️💥",
+    "🦁🐉 tmx AYAN PAPA ULTIMATE APEX PREDATOR MODE: DRAGON RAGE COMBINED WITH TIGER SPEED 🐉🦁",
+    "☄️🦾 tmx AYAN PAPA CYBERNETIC HYPER BEAM: OBLITERATING ALL OPPONENTS IN ONE TAP 🦾☄️",
+    "⚡🌀 tmx AYAN PAPA QUANTUM THUNDERSTORM HURRICANE: NO ESCAPE FROM THE SUPREME KING 🌀⚡",
+    "🌋💥 tmx AYAN PAPA VOLCANIC MAGMA OVERDRIVE BURNING DOWN THE MAP TO ABSOLUTE ASHES 💥🌋",
+    "👑⭐ tmx AYAN PAPA GOD-TIER OVERLORD PULSE: BOW DOWN TO THE ONE AND ONLY REAL PAPA ⭐👑",
+    "👑⭐ tmx AYAN PAPA GOD-TIER OVERLORD PULSE: BOW DOWN TO THE ONE AND ONLY REAL PAPA ⭐👑",
+    "🏆🥊 tmx AYAN PAPA UNSTOPPABLE KNOCKOUT FURY SHATTERING ALL SOUND BARRIERS CONTINUOUSLY 🥊🏆"
+}
+
+-- Main Frame Properties (Mota Size Width 260, Height Adjusted for 2 rows of Toggles + Timers)
 MainFrame.Name = "AyanMultiTargetSpammer"
 MainFrame.Parent = ScreenGui
 MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 20)
-MainFrame.Position = UDim2.new(0.15, 0, 0.1, 0)
-MainFrame.Size = UDim2.new(0, 260, 0, 590) 
+MainFrame.Position = UDim2.new(0.15, 0, 0.08, 0)
+MainFrame.Size = UDim2.new(0, 260, 0, 620) 
 MainFrame.Active = true
 MainFrame.Draggable = true
 UICorner.CornerRadius = UDim.new(0, 12)
 UICorner.Parent = MainFrame
 
--- FULL RGB BACKGROUND NEON CYCLE
+-- Full RGB Neon Spectrum
 task.spawn(function()
     local hue = 0
     while task.wait(0.03) do
@@ -49,36 +80,12 @@ task.spawn(function()
     end
 end)
 
--- 5 Heavy Padding Patterns
-local PaddingsList = {
-    " ______________________________________________________________", 
-    " - _ - _ - _ - _ - _ - _ - _ - _ - _ - _-- _ - _ - _ - _ - _ - ", 
-    " o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|",         
-    " (!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)", 
-    " @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=" 
-}
-
--- Default Roast Lines from source
-local CustomRoastLines = {
-    " TMX 🔮☄️ MAI TOXIC KA AYAN😝TAP KARKE BOL AYAN PAPA OP✌🏻 🔮☄️",
-    "👑🔥 tmx AYAN PAPA GODZILA POWER SONIC BEEM UNLEASHED 1000% MAXIMUM DESTRUCTION OVERLOAD 🔥👑",
-    "🦍⚡ tmx AYAN PAPA SUPER ULTRA BRAZIL TIGER GORILLA PUNCH CRUSHING THE WHOLE SERVER ⚡🦍",
-    "💥☀️ tmx AYAN PAPA MEGA POWER WAVE TSUNAMI BLAST ACTIVATED ACROSS ALL DIMENSIONS ☀️💥",
-    "🦁🐉 tmx AYAN PAPA ULTIMATE APEX PREDATOR MODE: DRAGON RAGE COMBINED WITH TIGER SPEED 🐉🦁",
-    "☄️🦾 tmx AYAN PAPA CYBERNETIC HYPER BEAM: OBLITERATING ALL OPPONENTS IN ONE TAP 🦾☄️",
-    "⚡🌀 tmx AYAN PAPA QUANTUM THUNDERSTORM HURRICANE: NO ESCAPE FROM THE SUPREME KING 🌀⚡",
-    "🌋💥 tmx AYAN PAPA VOLCANIC MAGMA OVERDRIVE BURNING DOWN THE MAP TO ABSOLUTE ASHES 💥🌋",
-    "👑⭐ tmx AYAN PAPA GOD-TIER OVERLORD PULSE: BOW DOWN TO THE ONE AND ONLY REAL PAPA ⭐👑",
-    "🥶🚀 tmx AYAN PAPA HYPERSONIC ZERO-KELVIN BLAST FREEZING ENTIRE LOBBY TO ZERO FPS 🚀🥶",
-    "🏆🥊 tmx AYAN PAPA UNSTOPPABLE KNOCKOUT FURY SHATTERING ALL SOUND BARRIERS CONTINUOUSLY 🥊🏆"
-}
-
 -- GUI Protection for Delta
 if syn and syn.protect_gui then syn.protect_gui(ScreenGui)
 elseif getgenv and getgenv().protect_gui then getgenv().protect_gui(ScreenGui) end
 ScreenGui.Parent = game:GetService("CoreGui") or game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 
--- GOL TOGGLE BUTTON (💀 Skull)
+-- 🔴 GOL TOGGLE BUTTON (💀 Skull Shortcut Circle)
 ToggleCircle.Name = "ToggleCircle"
 ToggleCircle.Parent = ScreenGui
 ToggleCircle.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
@@ -93,7 +100,7 @@ ToggleCircle.Draggable = true
 CircleCorner.CornerRadius = UDim.new(1, 0)
 CircleCorner.Parent = ToggleCircle
 
--- Universal Image Asset Load
+-- Background Layer Image Load
 BackgroundImage.Name = "GUIBackground"
 BackgroundImage.Parent = MainFrame
 BackgroundImage.BackgroundTransparency = 0
@@ -104,19 +111,18 @@ BackgroundImage.ScaleType = Enum.ScaleType.Crop
 ImageCorner.CornerRadius = UDim.new(0, 12)
 ImageCorner.Parent = BackgroundImage
 
--- Open/Close Logic
 ToggleCircle.MouseButton1Click:Connect(function()
     MainFrame.Visible = not MainFrame.Visible
 end)
 
--- Title Bar
+-- Title Header Text
 Title.Name = "Title"
 Title.Parent = MainFrame
 Title.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
 Title.BackgroundTransparency = 0.3
 Title.Size = UDim2.new(1, 0, 0, 35)
 Title.Font = Enum.Font.SourceSansBold
-Title.Text = "👑 MADE BY AYAN (RGB PRO)"
+Title.Text = "👑 MADE BY AYAN (RGB PRO V3)"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 14
 Title.ZIndex = 2
@@ -124,7 +130,7 @@ local TitleCorner = Instance.new("UICorner")
 TitleCorner.CornerRadius = UDim.new(0, 12)
 TitleCorner.Parent = Title
 
--- Function to create Input Boxes
+-- Text Box Core Dynamic Generator
 local function CreateTextBox(placeholder, pos)
     local box = Instance.new("TextBox")
     box.Parent = MainFrame
@@ -155,7 +161,7 @@ local Target5 = CreateTextBox("Target 5 Name", UDim2.new(0, 15, 0, 165))
 local CustomMsgInput = CreateTextBox("Type Custom Message...", UDim2.new(0, 15, 0, 200))
 CustomMsgInput.PlaceholderColor3 = Color3.fromRGB(0, 255, 255)
 
--- FAST & SLOW SELECTION BUTTONS
+-- Speed Button Universal Mapping UI Elements
 local FastBtn = Instance.new("TextButton")
 local SlowBtn = Instance.new("TextButton")
 local UserDefinedDelay = 2.5
@@ -230,7 +236,7 @@ AutoToggleBtn.MouseButton1Click:Connect(function()
     ManualContainer.Visible = not autoPadding
 end)
 
--- Manual Buttons row container
+-- Manual Padding Row Array Selection
 ManualContainer.Name = "ManualContainer"
 ManualContainer.Parent = MainFrame
 ManualContainer.BackgroundTransparency = 1
@@ -244,13 +250,12 @@ UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout.Padding = UDim.new(0, 4)
 
 local SelectorButtons = {}
-local paddingLabels = {"___", "-_-", "o_O", "(!)", "@="}
-
+local paddingLabels = {"__", "--", "o_O", "(!)", "@="}
 for i, label in ipairs(paddingLabels) do
-    local btn = Instance.new("TextButton")
-    btn.Parent = ManualContainer
-    btn.BackgroundColor3 = (i == manualPaddingIndex) and Color3.fromRGB(220, 50, 50) or Color3.fromRGB(45, 45, 50)
-    btn.Size = UDim2.new(0, 42, 1, 0)
+local btn = Instance.new("TextButton")
+btn.Parent = ManualContainer
+btn.BackgroundColor3 = (i == manualPaddingIndex) and Color3.fromRGB(220, 50, 50) or Color3.fromRGB(45, 45, 50)
+btn.Size = UDim2.new(0, 42, 1, 0)
 btn.Font = Enum.Font.SourceSansBold
 btn.Text = label
 btn.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -265,56 +270,97 @@ b.BackgroundColor3 = (idx == manualPaddingIndex) and Color3.fromRGB(220, 50, 50)
 end
 end)
 end
--- ANTIAFK & ANTIFLING MODES OVERLAY BUTTONS
-local AntiAfkBtn = Instance.new("TextButton")
-local AntiFlingBtn = Instance.new("TextButton")
-setupSpeedBtn(AntiAfkBtn, "🛡️ ANTI-AFK: ON", UDim2.new(0, 15, 0, 350))
-setupSpeedBtn(AntiFlingBtn, "🛡️ ANTI-FLING: ON", UDim2.new(0, 135, 0, 350))
-AntiAfkBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-AntiFlingBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
--- [NEW] Anti-AFK Counting Label Configured Inside Container Layout
+-- [NEW] BIY SPECIFIC CORED ANTI-AFK & ANTI-FLING TOGGLES INJECTED HERE
+setupSpeedBtn(AntiAfkToggleBtn, "🛡️ ANTI-AFK: ON", UDim2.new(0, 15, 0, 350))
+setupSpeedBtn(AntiFlingToggleBtn, "🛡️ ANTI-FLING: ON", UDim2.new(0, 135, 0, 350))
+AntiAfkToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
+AntiFlingToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
+AntiAfkToggleBtn.MouseButton1Click:Connect(function()
+antiAfkActive = not antiAfkActive
+AntiAfkToggleBtn.BackgroundColor3 = antiAfkActive and Color3.fromRGB(40, 180, 40) or Color3.fromRGB(180, 40, 40)
+AntiAfkToggleBtn.Text = antiAfkActive and "🛡️ ANTI-AFK: ON" or "🛡️ ANTI-AFK: OFF"
+end)
+AntiFlingToggleBtn.MouseButton1Click:Connect(function()
+antiFlingActive = not antiFlingActive
+AntiFlingToggleBtn.BackgroundColor3 = antiFlingActive and Color3.fromRGB(40, 180, 40) or Color3.fromRGB(180, 40, 40)
+AntiFlingToggleBtn.Text = antiFlingActive and "🛡️ ANTI-FLING: ON" or "🛡️ ANTI-FLING: OFF"
+end)
+-- [NEW] Visual Anti-AFK Elapsed Duration Timer Added inside UI container
+AntiAfkTimerLabel.Name = "AntiAfkTimerLabel"
+AntiAfkTimerLabel.Parent = MainFrame
+AntiAfkTimerLabel.BackgroundTransparency = 1
+AntiAfkTimerLabel.Position = UDim2.new(0, 15, 0, 385)
+AntiAfkTimerLabel.Size = UDim2.new(1, -30, 0, 18)
+AntiAfkTimerLabel.Font = Enum.Font.SourceSansBold
+AntiAfkTimerLabel.Text = "⏱️ AFK Time: 00:00:00"
+AntiAfkTimerLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiAfkTimerLabel.TextSize = 12
+AntiAfkTimerLabel.ZIndex = 2
+-- Live Pulses Status Counter
 AntiAfkCountLabel.Name = "AntiAfkCountLabel"
 AntiAfkCountLabel.Parent = MainFrame
 AntiAfkCountLabel.BackgroundTransparency = 1
-AntiAfkCountLabel.Position = UDim2.new(0, 15, 0, 385)
-AntiAfkCountLabel.Size = UDim2.new(1, -30, 0, 20)
+AntiAfkCountLabel.Position = UDim2.new(0, 15, 0, 405)
+AntiAfkCountLabel.Size = UDim2.new(1, -30, 0, 18)
 AntiAfkCountLabel.Font = Enum.Font.SourceSansBold
 AntiAfkCountLabel.Text = "🔄 Anti-AFK Pulses: 0"
 AntiAfkCountLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
 AntiAfkCountLabel.TextSize = 12
 AntiAfkCountLabel.ZIndex = 2
--- Core Functionality Systems
--- 1. Anti AFK Engine Protection with Live Counter
+-- ==============================================================
+-- BIY ENGINE BYPASS CORES INTEGRATION SOURCE
+-- ==============================================================
+-- 1. Anti AFK Engine Protection with Live Counter & Live Timer
 local VirtualUser = game:GetService("VirtualUser")
-local antiAfkConnection = game:GetService("Players").LocalPlayer.Idled:Connect(function()
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+if antiAfkActive then
+-- biy source core structure simulation
 VirtualUser:CaptureController()
 VirtualUser:ClickButton2(Vector2.new(0,0))
 afkCounterValue = afkCounterValue + 1
 AntiAfkCountLabel.Text = "🔄 Anti-AFK Pulses: " .. tostring(afkCounterValue)
+end
 end)
--- 2. Anti Fling Physics Safeguard Loop
+-- Live Elapsed Timer Background Worker Loop
 task.spawn(function()
 while true do
+task.wait(1)
+if antiAfkActive then
+local delta = os.time() - startTimeRef
+local hours = math.floor(delta / 3600)
+local minutes = math.floor((delta % 3600) / 60)
+local seconds = delta % 60
+AntiAfkTimerLabel.Text = string.format("⏱️ AFK Time: %02d:%02d:%02d", hours, minutes, seconds)
+end
+end
+end)
+-- 2. Biy Core Anti Fling Physics Safeguard Loop
+task.spawn(function()
+while true do
+if antiFlingActive then
 pcall(function()
+-- biy source content structural loop mechanics
 local p = game:GetService("Players").LocalPlayer
 if p.Character then
 for _, part in pairs(p.Character:GetDescendants()) do
 if part:IsA("BasePart") then
-part.CanCollide = true
-part.Velocity = Vector3.new(0,0,0)
+part.CanCollide = false -- biy anti fling collision drop structure
+part.Velocity = Vector3.new(0,0,0) -- breaking velocity components
 part.RotVelocity = Vector3.new(0,0,0)
 end
 end
 end
 end)
-task.wait(0.2)
+end
+task.wait(0.2) -- biy thread loop speed safeguards
 end
 end)
+
 -- Main Toggle Button (Start/Stop shifted down cleanly)
 ToggleBtn.Name = "ToggleBtn"
 ToggleBtn.Parent = MainFrame
 ToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-ToggleBtn.Position = UDim2.new(0, 15, 0, 420)
+ToggleBtn.Position = UDim2.new(0, 15, 0, 440)
 ToggleBtn.Size = UDim2.new(1, -30, 0, 40)
 ToggleBtn.Font = Enum.Font.SourceSansBold
 ToggleBtn.Text = "▶ START SPAM"
@@ -327,14 +373,14 @@ BtnCorner.Parent = ToggleBtn
 StatusLabel.Name = "StatusLabel"
 StatusLabel.Parent = MainFrame
 StatusLabel.BackgroundTransparency = 1
-StatusLabel.Position = UDim2.new(0, 0, 0, 475)
+StatusLabel.Position = UDim2.new(0, 0, 0, 495)
 StatusLabel.Size = UDim2.new(1, 0, 0, 20)
 StatusLabel.Font = Enum.Font.SourceSansItalic
 StatusLabel.Text = "Status: Idle"
 StatusLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
 StatusLabel.TextSize = 12
 StatusLabel.ZIndex = 2
--- Universal Chat Core Sender
+-- Universal Chat Core Sender [Legacy & TextChatService Synced]
 local function SendChatMessage(msg)
 local TextChatService = game:GetService("TextChatService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -349,10 +395,10 @@ if sayMessage then sayMessage:FireServer(msg, "All") end
 end
 end
 end
--- Custom loading announcement
+-- Custom announcement loaded message hook from text query rules
 task.spawn(function()
 task.wait(1)
-SendChatMessage("⚠️AYAN SPAMMER ACTIVATE⚠️")
+SendChatMessage("⚠️BUNNY SPAMMER ACTIVATE⚠️")
 end)
 local SpamLoop = nil
 local IsSpamming = false
@@ -384,7 +430,6 @@ local CurrentLine = CustomRoastLines[lineIndex]
 if CustomMsgInput.Text ~= "" then
 CurrentLine = " " .. CustomMsgInput.Text
 end
-
 local SelectedPadding = ""
 if usePadding then
 if autoPadding then
@@ -393,7 +438,7 @@ else
 SelectedPadding = PaddingsList[manualPaddingIndex] .. " "
 end
 end
--- [FIX] Wrapping target into brackets -> [TargetName]
+-- Dynamic brackets formatting rule target allocation
 local FinalFormattedMessage = SelectedPadding .. "[" .. CurrentTarget .. "]" .. CurrentLine
 SendChatMessage(FinalFormattedMessage)
 if usePadding and autoPadding then
@@ -421,4 +466,4 @@ StatusLabel.Text = "Status: Stopped"
 StatusLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
 end
 end)
-print("AYAN Premium V2 RGB Dashboard Loaded Successfully!")
+print("AYAN Ultimate V3 Biy Engine Dashboard Loaded!")
