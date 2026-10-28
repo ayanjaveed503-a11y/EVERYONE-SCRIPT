@@ -1,4 +1,4 @@
--- Delta Multi Player Spammer - Made by AYAN (Compact Resized Edition)
+-- Delta Multi Player Spammer - Made by AYAN (Ultimate RGB God Edition V2)
 local ScreenGui = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local BackgroundImage = Instance.new("ImageLabel")
@@ -21,6 +21,34 @@ local AutoToggleBtn = Instance.new("TextButton")
 local ManualContainer = Instance.new("Frame")
 local UIListLayout = Instance.new("UIListLayout")
 
+-- [NEW GUI CONTROLS] Anti-AFK Status Counting Label
+local AntiAfkCountLabel = Instance.new("TextLabel")
+local afkCounterValue = 0
+
+-- Main Frame Properties (Adjusted height for the new counter label slot)
+MainFrame.Name = "AyanMultiTargetSpammer"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 20)
+MainFrame.Position = UDim2.new(0.15, 0, 0.1, 0)
+MainFrame.Size = UDim2.new(0, 260, 0, 590) 
+MainFrame.Active = true
+MainFrame.Draggable = true
+UICorner.CornerRadius = UDim.new(0, 12)
+UICorner.Parent = MainFrame
+
+-- FULL RGB BACKGROUND NEON CYCLE
+task.spawn(function()
+    local hue = 0
+    while task.wait(0.03) do
+        hue = hue + 1
+        if hue > 360 then hue = 0 end
+        local rgbColor = Color3.fromHSV(hue/360, 1, 1)
+        MainFrame.BorderColor3 = rgbColor
+        Title.TextColor3 = rgbColor
+        ToggleCircle.BackgroundColor3 = rgbColor
+    end
+end)
+
 -- 5 Heavy Padding Patterns
 local PaddingsList = {
     " ______________________________________________________________", 
@@ -30,7 +58,7 @@ local PaddingsList = {
     " @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=" 
 }
 
--- Default Roast Lines
+-- Default Roast Lines from source
 local CustomRoastLines = {
     " TMX 🔮☄️ MAI TOXIC KA AYAN😝TAP KARKE BOL AYAN PAPA OP✌🏻 🔮☄️",
     "👑🔥 tmx AYAN PAPA GODZILA POWER SONIC BEEM UNLEASHED 1000% MAXIMUM DESTRUCTION OVERLOAD 🔥👑",
@@ -50,31 +78,20 @@ if syn and syn.protect_gui then syn.protect_gui(ScreenGui)
 elseif getgenv and getgenv().protect_gui then getgenv().protect_gui(ScreenGui) end
 ScreenGui.Parent = game:GetService("CoreGui") or game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 
--- 🔴 GOL TOGGLE BUTTON (💀 Skull)
+-- GOL TOGGLE BUTTON (💀 Skull)
 ToggleCircle.Name = "ToggleCircle"
 ToggleCircle.Parent = ScreenGui
 ToggleCircle.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
 ToggleCircle.Position = UDim2.new(0, 10, 0.5, -20)
-ToggleCircle.Size = UDim2.new(0, 40, 0, 40) -- Made smaller (40x40)
+ToggleCircle.Size = UDim2.new(0, 45, 0, 45)
 ToggleCircle.Font = Enum.Font.SourceSansBold
 ToggleCircle.Text = "💀"
 ToggleCircle.TextColor3 = Color3.fromRGB(255, 255, 255)
-ToggleCircle.TextSize = 20
+ToggleCircle.TextSize = 22
 ToggleCircle.Active = true
 ToggleCircle.Draggable = true
 CircleCorner.CornerRadius = UDim.new(1, 0)
 CircleCorner.Parent = ToggleCircle
-
--- [RESIZED] Main Frame Properties (Width 220, Height 430 - Super Compact!)
-MainFrame.Name = "AyanMultiTargetSpammer"
-MainFrame.Parent = ScreenGui
-MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 20)
-MainFrame.Position = UDim2.new(0.15, 0, 0.15, 0)
-MainFrame.Size = UDim2.new(0, 220, 0, 430) -- Strongly reduced size
-MainFrame.Active = true
-MainFrame.Draggable = true
-UICorner.CornerRadius = UDim.new(0, 10)
-UICorner.Parent = MainFrame
 
 -- Universal Image Asset Load
 BackgroundImage.Name = "GUIBackground"
@@ -84,7 +101,7 @@ BackgroundImage.Size = UDim2.new(1, 0, 1, 0)
 BackgroundImage.Image = "rbxassetid://13414163456"
 BackgroundImage.ImageTransparency = 0.85
 BackgroundImage.ScaleType = Enum.ScaleType.Crop
-ImageCorner.CornerRadius = UDim.new(0, 10)
+ImageCorner.CornerRadius = UDim.new(0, 12)
 ImageCorner.Parent = BackgroundImage
 
 -- Open/Close Logic
@@ -92,55 +109,84 @@ ToggleCircle.MouseButton1Click:Connect(function()
     MainFrame.Visible = not MainFrame.Visible
 end)
 
--- Title Bar Resized
+-- Title Bar
 Title.Name = "Title"
 Title.Parent = MainFrame
-Title.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
-Title.BackgroundTransparency = 0.1
-Title.Size = UDim2.new(1, 0, 0, 30) -- Compact height
+Title.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
+Title.BackgroundTransparency = 0.3
+Title.Size = UDim2.new(1, 0, 0, 35)
 Title.Font = Enum.Font.SourceSansBold
-Title.Text = "👑 MADE BY AYAN"
+Title.Text = "👑 MADE BY AYAN (RGB PRO)"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextSize = 13
+Title.TextSize = 14
 Title.ZIndex = 2
 local TitleCorner = Instance.new("UICorner")
-TitleCorner.CornerRadius = UDim.new(0, 10)
+TitleCorner.CornerRadius = UDim.new(0, 12)
 TitleCorner.Parent = Title
 
--- Function to create Compact Input Boxes
+-- Function to create Input Boxes
 local function CreateTextBox(placeholder, pos)
     local box = Instance.new("TextBox")
     box.Parent = MainFrame
     box.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
     box.BackgroundTransparency = 0.2
     box.Position = pos
-    box.Size = UDim2.new(1, -20, 0, 25) -- Reduced width and height
+    box.Size = UDim2.new(1, -30, 0, 26)
     box.Font = Enum.Font.SourceSans
     box.PlaceholderText = placeholder
     box.Text = ""
     box.TextColor3 = Color3.fromRGB(255, 255, 255)
-    box.TextSize = 12 -- Smaller font
+    box.TextSize = 13
     box.ZIndex = 2
     local corner = Instance.new("UICorner")
-    corner.CornerRadius = UDim.new(0, 4)
+    corner.CornerRadius = UDim.new(0, 5)
     corner.Parent = box
     return box
 end
 
--- 5 Target Name Inputs (Stacked tightly)
-local Target1 = CreateTextBox("Target 1 Name", UDim2.new(0, 10, 0, 40))
-local Target2 = CreateTextBox("Target 2 Name", UDim2.new(0, 10, 0, 70))
-local Target3 = CreateTextBox("Target 3 Name", UDim2.new(0, 10, 0, 100))
-local Target4 = CreateTextBox("Target 4 Name", UDim2.new(0, 10, 0, 130))
-local Target5 = CreateTextBox("Target 5 Name", UDim2.new(0, 10, 0, 160))
+-- 5 Target Name Inputs
+local Target1 = CreateTextBox("Target 1 Name", UDim2.new(0, 15, 0, 45))
+local Target2 = CreateTextBox("Target 2 Name", UDim2.new(0, 15, 0, 75))
+local Target3 = CreateTextBox("Target 3 Name", UDim2.new(0, 15, 0, 105))
+local Target4 = CreateTextBox("Target 4 Name", UDim2.new(0, 15, 0, 135))
+local Target5 = CreateTextBox("Target 5 Name", UDim2.new(0, 15, 0, 165))
 
--- Delay Input Box
-local DelayInput = CreateTextBox("Delay Seconds (e.g. 2.5)", UDim2.new(0, 10, 0, 195))
-DelayInput.PlaceholderColor3 = Color3.fromRGB(255, 165, 0)
-
--- Custom Message Input Box Option
-local CustomMsgInput = CreateTextBox("Type Custom Message...", UDim2.new(0, 10, 0, 225))
+-- Custom Message Input Box
+local CustomMsgInput = CreateTextBox("Type Custom Message...", UDim2.new(0, 15, 0, 200))
 CustomMsgInput.PlaceholderColor3 = Color3.fromRGB(0, 255, 255)
+
+-- FAST & SLOW SELECTION BUTTONS
+local FastBtn = Instance.new("TextButton")
+local SlowBtn = Instance.new("TextButton")
+local UserDefinedDelay = 2.5
+
+local function setupSpeedBtn(btn, text, pos)
+    btn.Parent = MainFrame
+    btn.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
+    btn.Position = pos
+    btn.Size = UDim2.new(0, 110, 0, 28)
+    btn.Font = Enum.Font.SourceSansBold
+    btn.Text = text
+    btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    btn.TextSize = 13
+    btn.ZIndex = 2
+    local c = Instance.new("UICorner") c.CornerRadius = UDim.new(0,5) c.Parent = btn
+end
+
+setupSpeedBtn(FastBtn, "⚡ FAST MODE", UDim2.new(0, 15, 0, 235))
+setupSpeedBtn(SlowBtn, "🐢 SLOW MODE", UDim2.new(0, 135, 0, 235))
+
+FastBtn.MouseButton1Click:Connect(function()
+    UserDefinedDelay = 0.4
+    FastBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
+    SlowBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
+end)
+
+SlowBtn.MouseButton1Click:Connect(function()
+    UserDefinedDelay = 4.0
+    SlowBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
+    FastBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
+end)
 
 -- Core configuration variables
 local usePadding = true
@@ -150,14 +196,14 @@ local manualPaddingIndex = 5
 -- Toggle Padding Button
 PaddingToggleBtn.Parent = MainFrame
 PaddingToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-PaddingToggleBtn.Position = UDim2.new(0, 10, 0, 260)
-PaddingToggleBtn.Size = UDim2.new(0, 95, 0, 25) -- Resized width
+PaddingToggleBtn.Position = UDim2.new(0, 15, 0, 275)
+PaddingToggleBtn.Size = UDim2.new(0, 110, 0, 28)
 PaddingToggleBtn.Font = Enum.Font.SourceSansBold
 PaddingToggleBtn.Text = "Padding: ON"
 PaddingToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-PaddingToggleBtn.TextSize = 11
+PaddingToggleBtn.TextSize = 12
 PaddingToggleBtn.ZIndex = 2
-local pCorner = Instance.new("UICorner") pCorner.CornerRadius = UDim.new(0,4) pCorner.Parent = PaddingToggleBtn
+local pCorner = Instance.new("UICorner") pCorner.CornerRadius = UDim.new(0,5) pCorner.Parent = PaddingToggleBtn
 
 PaddingToggleBtn.MouseButton1Click:Connect(function()
     usePadding = not usePadding
@@ -168,14 +214,14 @@ end)
 -- Toggle Auto Padding Button
 AutoToggleBtn.Parent = MainFrame
 AutoToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-AutoToggleBtn.Position = UDim2.new(0, 115, 0, 260)
-AutoToggleBtn.Size = UDim2.new(0, 95, 0, 25) -- Resized width
+AutoToggleBtn.Position = UDim2.new(0, 135, 0, 275)
+AutoToggleBtn.Size = UDim2.new(0, 110, 0, 28)
 AutoToggleBtn.Font = Enum.Font.SourceSansBold
 AutoToggleBtn.Text = "Auto Pad: ON"
 AutoToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-AutoToggleBtn.TextSize = 11
+AutoToggleBtn.TextSize = 12
 AutoToggleBtn.ZIndex = 2
-local aCorner = Instance.new("UICorner") aCorner.CornerRadius = UDim.new(0,4) aCorner.Parent = AutoToggleBtn
+local aCorner = Instance.new("UICorner") aCorner.CornerRadius = UDim.new(0,5) aCorner.Parent = AutoToggleBtn
 
 AutoToggleBtn.MouseButton1Click:Connect(function()
     autoPadding = not autoPadding
@@ -184,18 +230,18 @@ AutoToggleBtn.MouseButton1Click:Connect(function()
     ManualContainer.Visible = not autoPadding
 end)
 
--- Manual Buttons row container for 5 options
+-- Manual Buttons row container
 ManualContainer.Name = "ManualContainer"
 ManualContainer.Parent = MainFrame
 ManualContainer.BackgroundTransparency = 1
-ManualContainer.Position = UDim2.new(0, 10, 0, 295)
-ManualContainer.Size = UDim2.new(1, -20, 0, 25)
+ManualContainer.Position = UDim2.new(0, 15, 0, 312)
+ManualContainer.Size = UDim2.new(1, -30, 0, 26)
 ManualContainer.Visible = false
 
 UIListLayout.Parent = ManualContainer
 UIListLayout.FillDirection = Enum.FillDirection.Horizontal
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 3)
+UIListLayout.Padding = UDim.new(0, 4)
 
 local SelectorButtons = {}
 local paddingLabels = {"___", "-_-", "o_O", "(!)", "@="}
@@ -204,55 +250,96 @@ for i, label in ipairs(paddingLabels) do
     local btn = Instance.new("TextButton")
     btn.Parent = ManualContainer
     btn.BackgroundColor3 = (i == manualPaddingIndex) and Color3.fromRGB(220, 50, 50) or Color3.fromRGB(45, 45, 50)
-    btn.Size = UDim2.new(0, 37, 1, 0) -- Ultra tight button scaling
-    btn.Font = Enum.Font.SourceSansBold
-    btn.Text = label
-    btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    btn.TextSize = 11
-    btn.ZIndex = 2
-    local bC = Instance.new("UICorner") bC.CornerRadius = UDim.new(0,3) bC.Parent = btn
-    SelectorButtons[i] = btn
-    
-    btn.MouseButton1Click:Connect(function()
-        manualPaddingIndex = i
-        for idx, b in ipairs(SelectorButtons) do
-            b.BackgroundColor3 = (idx == manualPaddingIndex) and Color3.fromRGB(220, 50, 50) or Color3.fromRGB(45, 45, 50)
-        end
-    end)
+    btn.Size = UDim2.new(0, 42, 1, 0)
+btn.Font = Enum.Font.SourceSansBold
+btn.Text = label
+btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+btn.TextSize = 12
+btn.ZIndex = 2
+local bC = Instance.new("UICorner") bC.CornerRadius = UDim.new(0,3) bC.Parent = btn
+SelectorButtons[i] = btn
+btn.MouseButton1Click:Connect(function()
+manualPaddingIndex = i
+for idx, b in ipairs(SelectorButtons) do
+b.BackgroundColor3 = (idx == manualPaddingIndex) and Color3.fromRGB(220, 50, 50) or Color3.fromRGB(45, 45, 50)
 end
-
--- Main Toggle Button (Position auto shifts cleanly)
+end)
+end
+-- ANTIAFK & ANTIFLING MODES OVERLAY BUTTONS
+local AntiAfkBtn = Instance.new("TextButton")
+local AntiFlingBtn = Instance.new("TextButton")
+setupSpeedBtn(AntiAfkBtn, "🛡️ ANTI-AFK: ON", UDim2.new(0, 15, 0, 350))
+setupSpeedBtn(AntiFlingBtn, "🛡️ ANTI-FLING: ON", UDim2.new(0, 135, 0, 350))
+AntiAfkBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
+AntiFlingBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
+-- [NEW] Anti-AFK Counting Label Configured Inside Container Layout
+AntiAfkCountLabel.Name = "AntiAfkCountLabel"
+AntiAfkCountLabel.Parent = MainFrame
+AntiAfkCountLabel.BackgroundTransparency = 1
+AntiAfkCountLabel.Position = UDim2.new(0, 15, 0, 385)
+AntiAfkCountLabel.Size = UDim2.new(1, -30, 0, 20)
+AntiAfkCountLabel.Font = Enum.Font.SourceSansBold
+AntiAfkCountLabel.Text = "🔄 Anti-AFK Pulses: 0"
+AntiAfkCountLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
+AntiAfkCountLabel.TextSize = 12
+AntiAfkCountLabel.ZIndex = 2
+-- Core Functionality Systems
+-- 1. Anti AFK Engine Protection with Live Counter
+local VirtualUser = game:GetService("VirtualUser")
+local antiAfkConnection = game:GetService("Players").LocalPlayer.Idled:Connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new(0,0))
+afkCounterValue = afkCounterValue + 1
+AntiAfkCountLabel.Text = "🔄 Anti-AFK Pulses: " .. tostring(afkCounterValue)
+end)
+-- 2. Anti Fling Physics Safeguard Loop
+task.spawn(function()
+while true do
+pcall(function()
+local p = game:GetService("Players").LocalPlayer
+if p.Character then
+for _, part in pairs(p.Character:GetDescendants()) do
+if part:IsA("BasePart") then
+part.CanCollide = true
+part.Velocity = Vector3.new(0,0,0)
+part.RotVelocity = Vector3.new(0,0,0)
+end
+end
+end
+end)
+task.wait(0.2)
+end
+end)
+-- Main Toggle Button (Start/Stop shifted down cleanly)
 ToggleBtn.Name = "ToggleBtn"
 ToggleBtn.Parent = MainFrame
 ToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-ToggleBtn.Position = UDim2.new(0, 10, 0, 335)
-ToggleBtn.Size = UDim2.new(1, -20, 0, 35) -- Tighter button
+ToggleBtn.Position = UDim2.new(0, 15, 0, 420)
+ToggleBtn.Size = UDim2.new(1, -30, 0, 40)
 ToggleBtn.Font = Enum.Font.SourceSansBold
 ToggleBtn.Text = "▶ START SPAM"
 ToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-ToggleBtn.TextSize = 14
+ToggleBtn.TextSize = 15
 ToggleBtn.ZIndex = 2
-BtnCorner.CornerRadius = UDim.new(0, 6)
+BtnCorner.CornerRadius = UDim.new(0, 7)
 BtnCorner.Parent = ToggleBtn
-
 -- Status Text
 StatusLabel.Name = "StatusLabel"
 StatusLabel.Parent = MainFrame
 StatusLabel.BackgroundTransparency = 1
-StatusLabel.Position = UDim2.new(0, 0, 0, 385)
+StatusLabel.Position = UDim2.new(0, 0, 0, 475)
 StatusLabel.Size = UDim2.new(1, 0, 0, 20)
 StatusLabel.Font = Enum.Font.SourceSansItalic
 StatusLabel.Text = "Status: Idle"
 StatusLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
 StatusLabel.TextSize = 12
 StatusLabel.ZIndex = 2
-
 -- Universal Chat Core Sender
 local function SendChatMessage(msg)
-    local TextChatService = game:GetService("TextChatService")
-    local ReplicatedStorage = game:GetService("ReplicatedStorage")
-    if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
-    local textChannel = TextChatService.TextChannels:FindFirstChild("RBXGeneral")
+local TextChatService = game:GetService("TextChatService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+local textChannel = TextChatService.TextChannels:FindFirstChild("RBXGeneral")
 if textChannel then textChannel:SendAsync(msg) end
 else
 local chatEvents = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
@@ -282,8 +369,6 @@ StatusLabel.Text = "❌ Write at least 1 name!"
 StatusLabel.TextColor3 = Color3.fromRGB(255, 65, 65)
 return
 end
-local UserDelay = tonumber(DelayInput.Text) or 2.5
-if UserDelay < 0.4 then UserDelay = 0.4 end
 IsSpamming = true
 ToggleBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
 ToggleBtn.Text = "🛑 STOP SPAM"
@@ -299,6 +384,7 @@ local CurrentLine = CustomRoastLines[lineIndex]
 if CustomMsgInput.Text ~= "" then
 CurrentLine = " " .. CustomMsgInput.Text
 end
+
 local SelectedPadding = ""
 if usePadding then
 if autoPadding then
@@ -307,7 +393,8 @@ else
 SelectedPadding = PaddingsList[manualPaddingIndex] .. " "
 end
 end
-local FinalFormattedMessage = SelectedPadding .. CurrentTarget .. " " .. CurrentLine
+-- [FIX] Wrapping target into brackets -> [TargetName]
+local FinalFormattedMessage = SelectedPadding .. "[" .. CurrentTarget .. "]" .. CurrentLine
 SendChatMessage(FinalFormattedMessage)
 if usePadding and autoPadding then
 paddingIndex = paddingIndex + 1
@@ -319,7 +406,7 @@ if lineIndex > #CustomRoastLines then lineIndex = 1 end
 end
 targetIndex = targetIndex + 1
 if targetIndex > #TargetsList then targetIndex = 1 end
-task.wait(UserDelay)
+task.wait(UserDefinedDelay)
 end
 end)
 else
@@ -334,4 +421,4 @@ StatusLabel.Text = "Status: Stopped"
 StatusLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
 end
 end)
-print("AYAN Compact Pro Dashboard Loaded Successfully!")
+print("AYAN Premium V2 RGB Dashboard Loaded Successfully!")
