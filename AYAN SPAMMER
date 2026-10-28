@@ -1,4 +1,4 @@
--- Delta Multi Player Spammer - Made by AYAN (With Manual Padding Selector Dropdown)
+-- Delta Multi Player Spammer - Made by AYAN (Compact Resized Edition)
 local ScreenGui = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local BackgroundImage = Instance.new("ImageLabel")
@@ -17,20 +17,20 @@ local CircleCorner = Instance.new("UICorner")
 local PaddingToggleBtn = Instance.new("TextButton")
 local AutoToggleBtn = Instance.new("TextButton")
 
--- [NEW] Manual Selectors Container Frame
+-- Manual Selectors Container Frame
 local ManualContainer = Instance.new("Frame")
 local UIListLayout = Instance.new("UIListLayout")
 
--- Wall Paddings list with 5 distinct patterns
+-- 5 Heavy Padding Patterns
 local PaddingsList = {
-    " ------------------------------------------------------------", -- 1
-    " ============================================================", -- 2
-    " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", -- 3
-    " @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=", -- 4
-    " ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''"  -- 5
+    " ______________________________________", 
+    " - _ - _ - _ - _ - _ - _ - _ - _ - _ - _-", 
+    " o_O|o_O|o_O|o_O|o_O|o_O|o_O|o_O|",         
+    " (!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)(!)", 
+    " @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=" 
 }
 
--- Custom Roast Lines
+-- Default Roast Lines
 local CustomRoastLines = {
     " TMX MARE DIAMOND 💎 COSMIC 🌌 WAVE 🌊 TATTI 💩 ROSE 🌹 RICE 🍚 TORNADO 🌪️",
     " TMX MARE BLOOD 🩸 SUGAR 🍬 MANGO 🥭 RAINBOW 🌈 SNAKE 🐍 CLOWN 🤡 OMEGA 🌀",
@@ -45,31 +45,30 @@ if syn and syn.protect_gui then syn.protect_gui(ScreenGui)
 elseif getgenv and getgenv().protect_gui then getgenv().protect_gui(ScreenGui) end
 ScreenGui.Parent = game:GetService("CoreGui") or game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 
--- 🔴 GOL TOGGLE BUTTON (Side Panel with Skull Emoji 💀)
+-- 🔴 GOL TOGGLE BUTTON (💀 Skull)
 ToggleCircle.Name = "ToggleCircle"
 ToggleCircle.Parent = ScreenGui
 ToggleCircle.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
-ToggleCircle.Position = UDim2.new(0, 10, 0.5, -25)
-ToggleCircle.Size = UDim2.new(0, 50, 0, 50)
+ToggleCircle.Position = UDim2.new(0, 10, 0.5, -20)
+ToggleCircle.Size = UDim2.new(0, 40, 0, 40) -- Made smaller (40x40)
 ToggleCircle.Font = Enum.Font.SourceSansBold
 ToggleCircle.Text = "💀"
 ToggleCircle.TextColor3 = Color3.fromRGB(255, 255, 255)
-ToggleCircle.TextSize = 24
+ToggleCircle.TextSize = 20
 ToggleCircle.Active = true
 ToggleCircle.Draggable = true
 CircleCorner.CornerRadius = UDim.new(1, 0)
 CircleCorner.Parent = ToggleCircle
 
--- Main Frame Properties (Increased height to 570 for manual selection list)
+-- [RESIZED] Main Frame Properties (Width 220, Height 430 - Super Compact!)
 MainFrame.Name = "AyanMultiTargetSpammer"
 MainFrame.Parent = ScreenGui
 MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 20)
-MainFrame.Position = UDim2.new(0.1, 0, 0.15, 0)
-MainFrame.Size = UDim2.new(0, 280, 0, 570)
+MainFrame.Position = UDim2.new(0.15, 0, 0.15, 0)
+MainFrame.Size = UDim2.new(0, 220, 0, 430) -- Strongly reduced size
 MainFrame.Active = true
 MainFrame.Draggable = true
-
-UICorner.CornerRadius = UDim.new(0, 12)
+UICorner.CornerRadius = UDim.new(0, 10)
 UICorner.Parent = MainFrame
 
 -- Universal Image Asset Load
@@ -78,9 +77,9 @@ BackgroundImage.Parent = MainFrame
 BackgroundImage.BackgroundTransparency = 0
 BackgroundImage.Size = UDim2.new(1, 0, 1, 0)
 BackgroundImage.Image = "rbxassetid://13414163456"
-BackgroundImage.ImageTransparency = 0.8
+BackgroundImage.ImageTransparency = 0.85
 BackgroundImage.ScaleType = Enum.ScaleType.Crop
-ImageCorner.CornerRadius = UDim.new(0, 12)
+ImageCorner.CornerRadius = UDim.new(0, 10)
 ImageCorner.Parent = BackgroundImage
 
 -- Open/Close Logic
@@ -88,68 +87,72 @@ ToggleCircle.MouseButton1Click:Connect(function()
     MainFrame.Visible = not MainFrame.Visible
 end)
 
--- Title
+-- Title Bar Resized
 Title.Name = "Title"
 Title.Parent = MainFrame
 Title.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
 Title.BackgroundTransparency = 0.1
-Title.Size = UDim2.new(1, 0, 0, 40)
+Title.Size = UDim2.new(1, 0, 0, 30) -- Compact height
 Title.Font = Enum.Font.SourceSansBold
 Title.Text = "👑 MADE BY AYAN"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextSize = 14
+Title.TextSize = 13
 Title.ZIndex = 2
 local TitleCorner = Instance.new("UICorner")
-TitleCorner.CornerRadius = UDim.new(0, 12)
+TitleCorner.CornerRadius = UDim.new(0, 10)
 TitleCorner.Parent = Title
 
--- Function to create Input Boxes
-local function CreateTextBox(placeholder, pos, sizeY)
+-- Function to create Compact Input Boxes
+local function CreateTextBox(placeholder, pos)
     local box = Instance.new("TextBox")
     box.Parent = MainFrame
     box.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
     box.BackgroundTransparency = 0.2
     box.Position = pos
-    box.Size = UDim2.new(1, -30, 0, sizeY or 35)
+    box.Size = UDim2.new(1, -20, 0, 25) -- Reduced width and height
     box.Font = Enum.Font.SourceSans
     box.PlaceholderText = placeholder
     box.Text = ""
     box.TextColor3 = Color3.fromRGB(255, 255, 255)
-    box.TextSize = 14
+    box.TextSize = 12 -- Smaller font
     box.ZIndex = 2
     local corner = Instance.new("UICorner")
-    corner.CornerRadius = UDim.new(0, 6)
+    corner.CornerRadius = UDim.new(0, 4)
     corner.Parent = box
     return box
 end
 
--- 5 Target Name Inputs
-local Target1 = CreateTextBox("Target Player 1 Name", UDim2.new(0, 15, 0, 55))
-local Target2 = CreateTextBox("Target Player 2 Name", UDim2.new(0, 15, 0, 95))
-local Target3 = CreateTextBox("Target Player 3 Name", UDim2.new(0, 15, 0, 135))
-local Target4 = CreateTextBox("Target Player 4 Name", UDim2.new(0, 15, 0, 175))
-local Target5 = CreateTextBox("Target Player 5 Name", UDim2.new(0, 15, 0, 215))
+-- 5 Target Name Inputs (Stacked tightly)
+local Target1 = CreateTextBox("Target 1 Name", UDim2.new(0, 10, 0, 40))
+local Target2 = CreateTextBox("Target 2 Name", UDim2.new(0, 10, 0, 70))
+local Target3 = CreateTextBox("Target 3 Name", UDim2.new(0, 10, 0, 100))
+local Target4 = CreateTextBox("Target 4 Name", UDim2.new(0, 10, 0, 130))
+local Target5 = CreateTextBox("Target 5 Name", UDim2.new(0, 10, 0, 160))
 
 -- Delay Input Box
-local DelayInput = CreateTextBox("Delay in Seconds (e.g. 2.5)", UDim2.new(0, 15, 0, 265))
+local DelayInput = CreateTextBox("Delay Seconds (e.g. 2.5)", UDim2.new(0, 10, 0, 195))
 DelayInput.PlaceholderColor3 = Color3.fromRGB(255, 165, 0)
+
+-- Custom Message Input Box Option
+local CustomMsgInput = CreateTextBox("Type Custom Message...", UDim2.new(0, 10, 0, 225))
+CustomMsgInput.PlaceholderColor3 = Color3.fromRGB(0, 255, 255)
 
 -- Core configuration variables
 local usePadding = true
 local autoPadding = true
-local manualPaddingIndex = 4 -- Default to "@=" if manual is selected
+local manualPaddingIndex = 5
 
 -- Toggle Padding Button
 PaddingToggleBtn.Parent = MainFrame
 PaddingToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-PaddingToggleBtn.Position = UDim2.new(0, 15, 0, 310)
-PaddingToggleBtn.Size = UDim2.new(0, 120, 0, 35)
+PaddingToggleBtn.Position = UDim2.new(0, 10, 0, 260)
+PaddingToggleBtn.Size = UDim2.new(0, 95, 0, 25) -- Resized width
 PaddingToggleBtn.Font = Enum.Font.SourceSansBold
 PaddingToggleBtn.Text = "Padding: ON"
 PaddingToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-PaddingToggleBtn.TextSize = 13
+PaddingToggleBtn.TextSize = 11
 PaddingToggleBtn.ZIndex = 2
-local pCorner = Instance.new("UICorner") pCorner.CornerRadius = UDim.new(0,6) pCorner.Parent = PaddingToggleBtn
+local pCorner = Instance.new("UICorner") pCorner.CornerRadius = UDim.new(0,4) pCorner.Parent = PaddingToggleBtn
 
 PaddingToggleBtn.MouseButton1Click:Connect(function()
     usePadding = not usePadding
@@ -160,49 +163,49 @@ end)
 -- Toggle Auto Padding Button
 AutoToggleBtn.Parent = MainFrame
 AutoToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-AutoToggleBtn.Position = UDim2.new(0, 145, 0, 310)
-AutoToggleBtn.Size = UDim2.new(0, 120, 0, 35)
+AutoToggleBtn.Position = UDim2.new(0, 115, 0, 260)
+AutoToggleBtn.Size = UDim2.new(0, 95, 0, 25) -- Resized width
 AutoToggleBtn.Font = Enum.Font.SourceSansBold
-AutoToggleBtn.Text = "Auto Padding: ON"
+AutoToggleBtn.Text = "Auto Pad: ON"
 AutoToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-AutoToggleBtn.TextSize = 13
+AutoToggleBtn.TextSize = 11
 AutoToggleBtn.ZIndex = 2
-local aCorner = Instance.new("UICorner") aCorner.CornerRadius = UDim.new(0,6) aCorner.Parent = AutoToggleBtn
+local aCorner = Instance.new("UICorner") aCorner.CornerRadius = UDim.new(0,4) aCorner.Parent = AutoToggleBtn
 
 AutoToggleBtn.MouseButton1Click:Connect(function()
     autoPadding = not autoPadding
     AutoToggleBtn.BackgroundColor3 = autoPadding and Color3.fromRGB(40, 180, 40) or Color3.fromRGB(180, 40, 40)
-    AutoToggleBtn.Text = autoPadding and "Auto Padding: ON" or "Auto Padding: OFF"
-    ManualContainer.Visible = not autoPadding -- Show manual selection list ONLY if Auto is OFF
+    AutoToggleBtn.Text = autoPadding and "Auto Pad: ON" or "Auto Pad: OFF"
+    ManualContainer.Visible = not autoPadding
 end)
 
--- [NEW] MANUAL PADDING SELECTION BUTTONS (Horizontal Layout Array)
+-- Manual Buttons row container for 5 options
 ManualContainer.Name = "ManualContainer"
 ManualContainer.Parent = MainFrame
 ManualContainer.BackgroundTransparency = 1
-ManualContainer.Position = UDim2.new(0, 15, 0, 355)
-ManualContainer.Size = UDim2.new(1, -30, 0, 30)
-ManualContainer.Visible = false -- Hidden initially because Auto Padding is ON by default
+ManualContainer.Position = UDim2.new(0, 10, 0, 295)
+ManualContainer.Size = UDim2.new(1, -20, 0, 25)
+ManualContainer.Visible = false
 
 UIListLayout.Parent = ManualContainer
 UIListLayout.FillDirection = Enum.FillDirection.Horizontal
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 5)
+UIListLayout.Padding = UDim.new(0, 3)
 
 local SelectorButtons = {}
-local paddingLabels = {"-", "=", "~", "@=", "'"}
+local paddingLabels = {"___", "-_-", "o_O", "(!)", "@="}
 
 for i, label in ipairs(paddingLabels) do
     local btn = Instance.new("TextButton")
     btn.Parent = ManualContainer
     btn.BackgroundColor3 = (i == manualPaddingIndex) and Color3.fromRGB(220, 50, 50) or Color3.fromRGB(45, 45, 50)
-    btn.Size = UDim2.new(0, 46, 1, 0)
+    btn.Size = UDim2.new(0, 37, 1, 0) -- Ultra tight button scaling
     btn.Font = Enum.Font.SourceSansBold
     btn.Text = label
     btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    btn.TextSize = 14
+    btn.TextSize = 11
     btn.ZIndex = 2
-    local bC = Instance.new("UICorner") bC.CornerRadius = UDim.new(0,4) bC.Parent = btn
+    local bC = Instance.new("UICorner") bC.CornerRadius = UDim.new(0,3) bC.Parent = btn
     SelectorButtons[i] = btn
     
     btn.MouseButton1Click:Connect(function()
@@ -213,30 +216,30 @@ for i, label in ipairs(paddingLabels) do
     end)
 end
 
--- Main Toggle Button (Start/Stop shifted down to accommodate row)
+-- Main Toggle Button (Position auto shifts cleanly)
 ToggleBtn.Name = "ToggleBtn"
 ToggleBtn.Parent = MainFrame
 ToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-ToggleBtn.Position = UDim2.new(0, 15, 0, 400)
-ToggleBtn.Size = UDim2.new(1, -30, 0, 45)
+ToggleBtn.Position = UDim2.new(0, 10, 0, 335)
+ToggleBtn.Size = UDim2.new(1, -20, 0, 35) -- Tighter button
 ToggleBtn.Font = Enum.Font.SourceSansBold
 ToggleBtn.Text = "▶ START SPAM"
 ToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-ToggleBtn.TextSize = 16
+ToggleBtn.TextSize = 14
 ToggleBtn.ZIndex = 2
-BtnCorner.CornerRadius = UDim.new(0, 8)
+BtnCorner.CornerRadius = UDim.new(0, 6)
 BtnCorner.Parent = ToggleBtn
 
--- Status Text Position Adjusted
+-- Status Text
 StatusLabel.Name = "StatusLabel"
 StatusLabel.Parent = MainFrame
 StatusLabel.BackgroundTransparency = 1
-StatusLabel.Position = UDim2.new(0, 0, 0, 465)
-StatusLabel.Size = UDim2.new(1, 0, 0, 30)
+StatusLabel.Position = UDim2.new(0, 0, 0, 385)
+StatusLabel.Size = UDim2.new(1, 0, 0, 20)
 StatusLabel.Font = Enum.Font.SourceSansItalic
 StatusLabel.Text = "Status: Idle"
 StatusLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
-StatusLabel.TextSize = 13
+StatusLabel.TextSize = 12
 StatusLabel.ZIndex = 2
 
 -- Universal Chat Core Sender
@@ -270,7 +273,7 @@ if Target3.Text ~= "" then table.insert(TargetsList, Target3.Text) end
 if Target4.Text ~= "" then table.insert(TargetsList, Target4.Text) end
 if Target5.Text ~= "" then table.insert(TargetsList, Target5.Text) end
 if #TargetsList == 0 then
-StatusLabel.Text = "❌ Kam se kam 1 player ka naam likhein!"
+StatusLabel.Text = "❌ Write at least 1 name!"
 StatusLabel.TextColor3 = Color3.fromRGB(255, 65, 65)
 return
 end
@@ -279,7 +282,7 @@ if UserDelay < 0.4 then UserDelay = 0.4 end
 IsSpamming = true
 ToggleBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
 ToggleBtn.Text = "🛑 STOP SPAM"
-StatusLabel.Text = "⚡ Spammer Active (" .. #TargetsList .. " Targets)"
+StatusLabel.Text = "⚡ Active (" .. #TargetsList .. " Targets)"
 StatusLabel.TextColor3 = Color3.fromRGB(65, 255, 65)
 SpamLoop = task.spawn(function()
 local lineIndex = 1
@@ -288,7 +291,9 @@ local paddingIndex = 1
 while IsSpamming do
 local CurrentTarget = TargetsList[targetIndex]
 local CurrentLine = CustomRoastLines[lineIndex]
--- Dynamic formatting assignment based on toggles
+if CustomMsgInput.Text ~= "" then
+CurrentLine = " " .. CustomMsgInput.Text
+end
 local SelectedPadding = ""
 if usePadding then
 if autoPadding then
@@ -299,13 +304,14 @@ end
 end
 local FinalFormattedMessage = SelectedPadding .. CurrentTarget .. " " .. CurrentLine
 SendChatMessage(FinalFormattedMessage)
--- Increment loops based on mode status
 if usePadding and autoPadding then
 paddingIndex = paddingIndex + 1
 if paddingIndex > #PaddingsList then paddingIndex = 1 end
 end
+if CustomMsgInput.Text == "" then
 lineIndex = lineIndex + 1
 if lineIndex > #CustomRoastLines then lineIndex = 1 end
+end
 targetIndex = targetIndex + 1
 if targetIndex > #TargetsList then targetIndex = 1 end
 task.wait(UserDelay)
@@ -323,4 +329,4 @@ StatusLabel.Text = "Status: Stopped"
 StatusLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
 end
 end)
-print("AYAN Ultimate Manual Padding Dashboard Injected!")
+print("AYAN Compact Pro Dashboard Loaded Successfully!")
