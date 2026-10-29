@@ -43,7 +43,7 @@ local antiAfkActive = true
 local antiFlingActive = true
 local TargetsTextBoxesList = {} 
 
--- 👑 [ROAST NAME CONFIGURATION - YAHAN APNA YA KISI AUR KA NAAM CHANGE KAR SKTE HO ROASTS KE LIYE] 👑
+-- 👑 [YOUR NAME CONFIGURATION - YAHAN APNA YA KISI AUR KA NAAM CHANGE KAR SKTE HO ROASTS KE LIYE] 👑
 local YOUR_NAME = "AYANUU" 
 
 -- 5 Heavy Padding Patterns
@@ -85,7 +85,7 @@ local CustomRoastLines = {
     "⚡🌀 tmx " .. YOUR_NAME .. " QUANTUM THUNDERSTORM HURRICANE: NO ESCAPE FROM THE SUPREME KING 🌀⚡",
     "🌋💥 tmx " .. YOUR_NAME .. " VOLCANIC MAGMA OVERDRIVE BURNING DOWN THE MAP TO ABSOLUTE ASHES 💥🌋",
     "👑⭐ tmx " .. YOUR_NAME .. " GOD-TIER OVERLORD PULSE: BOW DOWN TO THE ONE AND ONLY REAL " .. YOUR_NAME .. " ⭐👑",
-    "🏆🥊 tmx " .. YOUR_NAME .. " UNSTOPPABLE KNOCKOUT FURY SHATTERING ALL SOUND BARRIERS CONTINUOUSLY 🥊🏆"
+    "🏆🥊 tmx " .. YOUR_NAME .. " UNSTOPPABLE KNOCKOUT FURY SHATTERING ALL SOUND BARRIERS CONTINUOUSLY 🏆🥊"
 }
 
 -- [RESIZED & SHIFTED] Main Frame Panel Setup (Width 330)
@@ -258,7 +258,7 @@ DialogLabel.BackgroundTransparency = 1
 DialogLabel.Position = UDim2.new(0, 5, 0, 4)
 DialogLabel.Size = UDim2.new(1, -10, 0, 20)
 DialogLabel.Font = Enum.Font.SourceSansBold
-DialogLabel.Text = "❓ Do you want another target?"
+DialogLabel.Text = "❓ Another target?"
 DialogLabel.TextColor3 = Color3.fromRGB(255, 215, 0)
 DialogLabel.TextSize = 13
 DialogLabel.ZIndex = 3
@@ -277,7 +277,7 @@ local function configureDialogButton(btn, text, pos, bgCol)
 end
 
 configureDialogButton(YesBtn, "✔ YES (Add More)", UDim2.new(0, 8, 0, 26), Color3.fromRGB(40, 140, 40))
-configureDialogButton(NoBtn, "❌ NO (Lock List)", UDim2.new(0, 152, 0, 26), Color3.fromRGB(140, 40, 40))
+configureDialogButton(NoBtn, "❌ NO (Done)", UDim2.new(0, 152, 0, 26), Color3.fromRGB(140, 40, 40))
 
 YesBtn.MouseButton1Click:Connect(function()
     CreateDynamicTargetRow()
@@ -287,7 +287,7 @@ end)
 
 NoBtn.MouseButton1Click:Connect(function()
     DialogFrame.Visible = false
-    StatusLabel.Text = "Status: Targets list locked successfully."
+    StatusLabel.Text = "Status: Targets list saved successfully."
     StatusLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
 end)
 
