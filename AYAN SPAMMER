@@ -43,9 +43,6 @@ local antiAfkActive = true
 local antiFlingActive = true
 local TargetsTextBoxesList = {} 
 
--- 👑 [YOUR NAME CONFIGURATION - YAHAN APNA YA KISI AUR KA NAAM CHANGE KAR SKTE HO ROASTS KE LIYE] 👑
-local YOUR_NAME = "AYANUU" 
-
 -- 5 Heavy Padding Patterns
 local PaddingsList = {
     " ______________________________________________________________", 
@@ -55,45 +52,12 @@ local PaddingsList = {
     " @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=" 
 }
 
--- Roast Lines Array (Ab yahan YOUR_NAME variable use ho raha hai)
-local CustomRoastLines = {
-    "🔮☄️ TMX MAI TOXIC KA " .. YOUR_NAME .. "😝TAP KARKE BOL " .. YOUR_NAME .. " OP 🔮☄️",
-    "👑🔥 TMX " .. YOUR_NAME .. " GODZILA POWER SONIC BEEM UNLEASHED 1000% MAXIMUM DESTRUCTION OVERLOAD 🔥👑",
-    "🦍⚡ tmx " .. YOUR_NAME .. " SUPER ULTRA BRAZIL TIGER GORILLA PUNCH CRUSHING THE WHOLE SERVER ⚡🦍",
-    "💥☀️ tmx " .. YOUR_NAME .. " MEGA POWER WAVE TSUNAMI BLAST ACTIVATED ACROSS ALL DIMENSIONS ☀️💥",
-    "🦁🐉 tmx " .. YOUR_NAME .. " ULTIMATE APEX PREDATOR MODE: DRAGON RAGE COMBINED WITH TIGER SPEED 🐉🦁",
-    "☄️🦾 tmx " .. YOUR_NAME .. " CYBERNETIC HYPER BEAM: OBLITERATING ALL OPPONENTS IN ONE TAP 🦾☄️",
-    "👑💥 tmx " .. YOUR_NAME .. " SUPREME OVERLORD UNLEASHING 9999X INTERGALACTIC PLASMA EXPLOSION DIRECTLY ON YOUR HEAD 💥👑",
-    "⚡🐉 tmx " .. YOUR_NAME .. " ELECTRIC DRAGON EMBERS BURNING THROUGH ENTIRE LOBBY WITH MAXIMUM VOLTAGE ENERGY ⚡🐉",
-    "🦾🔥 tmx " .. YOUR_NAME .. " CYBER MECHA GODZILA LASER CANNON SHORT-CIRCUITING YOUR WHOLE DEVICE FPS TO ZERO 🔥🦾",
-    "👑🔥 tmx " .. YOUR_NAME .. " SUPREME DIMENSIONAL RULER SUMMONING THE ANCIENT GODZILA FURY TO WIPE THE MAP CLEAN 🔥👑",
-    "⚡🌀 tmx " .. YOUR_NAME .. " QUANTUM TIME-WARP VORTEX SUCKING ALL YOUR SKILLS AND FPS INTO THE DEEP VOID 🌀⚡",
-    "🦾💥 tmx " .. YOUR_NAME .. " UNSTOPPABLE CYBERNETIC APOCALYPSE CRUSHING EVERY OPPONENT WITH 1000000X FORCE 💥🦾",
-    "🐉⭐ tmx " .. YOUR_NAME .. " LEGENDARY DRAGON OVERLORD ASCENSION: THE ENTIRE LOBBY BOWS TO THE TRUE KING ⭐🐉",
-    "🌪️🌊 tmx " .. YOUR_NAME .. " CATEGORY 10 TITAN HURRICANE WIPING OUT EVERY SINGLE PLAYER IN FRACTION OF A SECOND 🌊🌪️",
-    "☄️🥊 tmx " .. YOUR_NAME .. " HYPER SONIC METEOR STRIKE COMBINED WITH JUNGLE KINGDOM FURY CRUSHING ALL DEFENSES 🥊☄️",
-    "🌋☀️ tmx " .. YOUR_NAME .. " MOLTEN MAGMA TSUNAMI FLOODING THE ENTIRE DIMENSION WITH UNSTOPPABLE HEAT PULSE ☀️🌋",
-    "🗿👑 tmx " .. YOUR_NAME .. " THE UNDEFEATED EMPEROR STEPPING INTO THE MAP: EVERYONE KNEEL BEFORE THE REAL " .. YOUR_NAME .. " 👑🗿",
-    "🥶⚡ tmx " .. YOUR_NAME .. " FROSTBITE QUANTUM BEAM TURNING YOUR WHOLE AVATAR INTO FROZEN PIXEL DUST INSTANTLY ⚡🥶",
-    "🦁💫 tmx " .. YOUR_NAME .. " ULTIMATE APEX PREDATOR ROAR CAUSING MAXIMUM DAMAGE OVERLOAD ACROSS THE ENTIRE SERVER 💫🦁",
-    "🏆💥 tmx " .. YOUR_NAME .. " TITANIC BLACK HOLE VOID ABSORBING ENTIRE MAP STRUCTURE WITH UNLEASHED POWER 💥🏆",
-    "✨🌀 tmx " .. YOUR_NAME .. " CELESTIAL PHANTOM BARRAGE STRIKING FROM ALL ANGLES AT LIGHTNING SPEED 🌀✨",
-    "🚀💀 tmx " .. YOUR_NAME .. " OMEGA WARRIOR APOCALYPSE LEAVING NO CHANCE BEFORE THEY EVEN SPAWN IN 💀🚀",
-    "🐅⚡ tmx " .. YOUR_NAME .. " WILD TIGER SPEED OVERDRIVE LEAVING BEHIND A TRAIL OF TOTAL DESTRUCTION AND CHAOS ⚡🐅",
-    "💥⭐ tmx " .. YOUR_NAME .. " COSMIC SUPERNOVA SHOCKWAVE DETONATING IN THE LOBBY: ABSOLUTE WIPE PROTOCOL ACTIVE ⭐💥",
-    "🥊🔥 tmx " .. YOUR_NAME .. " GOD-MODE ULTRA COMBO BREAKING ALL GAME LIMITS AND CRASHING THE OPPONENT VIBE 🔥🥊",
-    "⚡🌀 tmx " .. YOUR_NAME .. " QUANTUM THUNDERSTORM HURRICANE: NO ESCAPE FROM THE SUPREME KING 🌀⚡",
-    "🌋💥 tmx " .. YOUR_NAME .. " VOLCANIC MAGMA OVERDRIVE BURNING DOWN THE MAP TO ABSOLUTE ASHES 💥🌋",
-    "👑⭐ tmx " .. YOUR_NAME .. " GOD-TIER OVERLORD PULSE: BOW DOWN TO THE ONE AND ONLY REAL " .. YOUR_NAME .. " ⭐👑",
-    "🏆🥊 tmx " .. YOUR_NAME .. " UNSTOPPABLE KNOCKOUT FURY SHATTERING ALL SOUND BARRIERS CONTINUOUSLY 🏆🥊"
-}
-
--- [RESIZED & SHIFTED] Main Frame Panel Setup (Width 330)
+-- [COMPACT & WIDER] Main Frame Panel Setup (Width 330, Height 580 - Niche nahi jayega)
 MainFrame.Name = "AyanMultiTargetSpammer"
 MainFrame.Parent = ScreenGui
 MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 20)
-MainFrame.Position = UDim2.new(0.12, 0, 0.10, 0)
-MainFrame.Size = UDim2.new(0, 330, 0, 610) 
+MainFrame.Position = UDim2.new(0.12, 0, 0.08, 0)
+MainFrame.Size = UDim2.new(0, 330, 0, 580) 
 MainFrame.Active = true
 MainFrame.Draggable = true
 UICorner.CornerRadius = UDim.new(0, 12)
@@ -152,7 +116,7 @@ Title.Name = "Title"
 Title.Parent = MainFrame
 Title.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
 Title.BackgroundTransparency = 0.3
-Title.Size = UDim2.new(1, 0, 0, 35)
+Title.Size = UDim2.new(1, 0, 0, 30)
 Title.Font = Enum.Font.SourceSansBold
 Title.Text = "👑 MADE BY AYANUU 👑"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -166,15 +130,15 @@ TitleCorner.Parent = Title
 TargetsScrollingFrame.Name = "TargetsScrollingFrame"
 TargetsScrollingFrame.Parent = MainFrame
 TargetsScrollingFrame.BackgroundTransparency = 1
-TargetsScrollingFrame.Position = UDim2.new(0, 15, 0, 45)
-TargetsScrollingFrame.Size = UDim2.new(1, -30, 0, 125) 
+TargetsScrollingFrame.Position = UDim2.new(0, 15, 0, 38)
+TargetsScrollingFrame.Size = UDim2.new(1, -30, 0, 100) 
 TargetsScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
 TargetsScrollingFrame.ScrollBarThickness = 4
 TargetsScrollingFrame.ZIndex = 2
 
 TargetsListLayout.Parent = TargetsScrollingFrame
 TargetsListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-TargetsListLayout.Padding = UDim.new(0, 5)
+TargetsListLayout.Padding = UDim.new(0, 4)
 
 local function TriggerInteractiveQuestion()
     DialogFrame.Visible = true
@@ -189,7 +153,7 @@ local function CreateDynamicTargetRow()
     local DelCorner = Instance.new("UICorner")
 
     RowFrame.Name = "TargetRow"
-    RowFrame.Size = UDim2.new(1, 0, 0, 26)
+    RowFrame.Size = UDim2.new(1, 0, 0, 24)
     RowFrame.BackgroundTransparency = 1
     RowFrame.Parent = TargetsScrollingFrame
     RowFrame.ZIndex = 2
@@ -198,27 +162,27 @@ local function CreateDynamicTargetRow()
     NewBox.Parent = RowFrame
     NewBox.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
     NewBox.BackgroundTransparency = 0.2
-    NewBox.Size = UDim2.new(1, -32, 1, 0)
+    NewBox.Size = UDim2.new(1, -28, 1, 0)
     NewBox.Font = Enum.Font.SourceSans
     NewBox.PlaceholderText = "Type target name..."
     NewBox.Text = ""
     NewBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-    NewBox.TextSize = 13
+    NewBox.TextSize = 12
     NewBox.ZIndex = 3
-    BoxCorner.CornerRadius = UDim.new(0, 5)
+    BoxCorner.CornerRadius = UDim.new(0, 4)
     BoxCorner.Parent = NewBox
 
     DeleteBtn.Name = "DeleteBtn"
     DeleteBtn.Parent = RowFrame
     DeleteBtn.BackgroundColor3 = Color3.fromRGB(180, 40, 40)
-    DeleteBtn.Position = UDim2.new(1, -26, 0, 0)
-    DeleteBtn.Size = UDim2.new(0, 26, 1, 0)
+    DeleteBtn.Position = UDim2.new(1, -24, 0, 0)
+    DeleteBtn.Size = UDim2.new(0, 24, 1, 0)
     DeleteBtn.Font = Enum.Font.SourceSansBold
     DeleteBtn.Text = "❌"
     DeleteBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    DeleteBtn.TextSize = 10
+    DeleteBtn.TextSize = 9
     DeleteBtn.ZIndex = 3
-    DelCorner.CornerRadius = UDim.new(0, 5)
+    DelCorner.CornerRadius = UDim.new(0, 4)
     DelCorner.Parent = DeleteBtn
 
     table.insert(TargetsTextBoxesList, NewBox)
@@ -248,46 +212,46 @@ DialogFrame.Name = "DialogFrame"
 DialogFrame.Parent = MainFrame
 DialogFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 45)
 DialogFrame.BackgroundTransparency = 0.1
-DialogFrame.Position = UDim2.new(0, 15, 0, 175)
-DialogFrame.Size = UDim2.new(1, -30, 0, 55)
+DialogFrame.Position = UDim2.new(0, 15, 0, 145)
+DialogFrame.Size = UDim2.new(1, -30, 0, 48)
 DialogFrame.Visible = true
-local dFCorner = Instance.new("UICorner") dFCorner.CornerRadius = UDim.new(0,6) dFCorner.Parent = DialogFrame
+local dFCorner = Instance.new("UICorner") dFCorner.CornerRadius = UDim.new(0,5) dFCorner.Parent = DialogFrame
 
 DialogLabel.Parent = DialogFrame
 DialogLabel.BackgroundTransparency = 1
-DialogLabel.Position = UDim2.new(0, 5, 0, 4)
-DialogLabel.Size = UDim2.new(1, -10, 0, 20)
+DialogLabel.Position = UDim2.new(0, 5, 0, 3)
+DialogLabel.Size = UDim2.new(1, -10, 0, 18)
 DialogLabel.Font = Enum.Font.SourceSansBold
 DialogLabel.Text = "❓ Another target?"
 DialogLabel.TextColor3 = Color3.fromRGB(255, 215, 0)
-DialogLabel.TextSize = 13
+DialogLabel.TextSize = 12
 DialogLabel.ZIndex = 3
 
 local function configureDialogButton(btn, text, pos, bgCol)
     btn.Parent = DialogFrame
     btn.BackgroundColor3 = bgCol
     btn.Position = pos
-    btn.Size = UDim2.new(0, 135, 0, 22)
+    btn.Size = UDim2.new(0, 135, 0, 20)
     btn.Font = Enum.Font.SourceSansBold
     btn.Text = text
     btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    btn.TextSize = 12
+    btn.TextSize = 11
     btn.ZIndex = 3
-    local c = Instance.new("UICorner") c.CornerRadius = UDim.new(0,4) c.Parent = btn
+    local c = Instance.new("UICorner") c.CornerRadius = UDim.new(0,3) c.Parent = btn
 end
 
-configureDialogButton(YesBtn, "✔ YES (Add More)", UDim2.new(0, 8, 0, 26), Color3.fromRGB(40, 140, 40))
-configureDialogButton(NoBtn, "❌ NO (Done)", UDim2.new(0, 152, 0, 26), Color3.fromRGB(140, 40, 40))
+configureDialogButton(YesBtn, "✔ YES (Add More)", UDim2.new(0, 8, 0, 23), Color3.fromRGB(40, 140, 40))
+configureDialogButton(NoBtn, "❌ NO (Done)", UDim2.new(0, 152, 0, 23), Color3.fromRGB(140, 40, 40))
 
 YesBtn.MouseButton1Click:Connect(function()
     CreateDynamicTargetRow()
-    StatusLabel.Text = "Status: New input slot added below!"
+    StatusLabel.Text = "Status: New input slot added!"
     StatusLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
 end)
 
 NoBtn.MouseButton1Click:Connect(function()
     DialogFrame.Visible = false
-    StatusLabel.Text = "Status: Targets list saved successfully."
+    StatusLabel.Text = "Status: Targets list saved."
     StatusLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
 end)
 
@@ -299,20 +263,24 @@ local function CreateTextBox(placeholder, pos)
     box.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
     box.BackgroundTransparency = 0.2
     box.Position = pos
-    box.Size = UDim2.new(1, -30, 0, 26)
+    box.Size = UDim2.new(1, -30, 0, 24)
     box.Font = Enum.Font.SourceSans
     box.PlaceholderText = placeholder
     box.Text = ""
     box.TextColor3 = Color3.fromRGB(255, 255, 255)
-    box.TextSize = 13
+    box.TextSize = 12
     box.ZIndex = 2
     local corner = Instance.new("UICorner")
-    corner.CornerRadius = UDim.new(0, 5)
+    corner.CornerRadius = UDim.new(0, 4)
     corner.Parent = box
     return box
 end
 
-local CustomMsgInput = CreateTextBox("Type Custom Message...", UDim2.new(0, 15, 0, 240))
+-- 👑 Dedicated Box to Type Your Name inside GUI
+local YourNameInput = CreateTextBox("Type Your Name (Default: AYANUU)...", UDim2.new(0, 15, 0, 200))
+YourNameInput.PlaceholderColor3 = Color3.fromRGB(255, 215, 0)
+
+local CustomMsgInput = CreateTextBox("Type Custom Message...", UDim2.new(0, 15, 0, 230))
 CustomMsgInput.PlaceholderColor3 = Color3.fromRGB(0, 255, 255)
 
 local FastBtn = Instance.new("TextButton")
@@ -323,17 +291,17 @@ local function setupSpeedBtn(btn, text, pos)
     btn.Parent = MainFrame
     btn.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
     btn.Position = pos
-    btn.Size = UDim2.new(0, 142, 0, 28)
+    btn.Size = UDim2.new(0, 142, 0, 24)
     btn.Font = Enum.Font.SourceSansBold
     btn.Text = text
     btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    btn.TextSize = 13
+    btn.TextSize = 12
     btn.ZIndex = 2
-    local c = Instance.new("UICorner") c.CornerRadius = UDim.new(0,5) c.Parent = btn
+    local c = Instance.new("UICorner") c.CornerRadius = UDim.new(0,4) c.Parent = btn
 end
 
-setupSpeedBtn(FastBtn, "⚡ FAST MODE", UDim2.new(0, 15, 0, 275))
-setupSpeedBtn(SlowBtn, "🐢 SLOW MODE", UDim2.new(0, 172, 0, 275))
+setupSpeedBtn(FastBtn, "⚡ FAST MODE", UDim2.new(0, 15, 0, 260))
+setupSpeedBtn(SlowBtn, "🐢 SLOW MODE", UDim2.new(0, 172, 0, 260))
 
 FastBtn.MouseButton1Click:Connect(function()
     UserDefinedDelay = 0.4
@@ -353,14 +321,14 @@ local manualPaddingIndex = 5
 
 PaddingToggleBtn.Parent = MainFrame
 PaddingToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-PaddingToggleBtn.Position = UDim2.new(0, 15, 0, 310)
-PaddingToggleBtn.Size = UDim2.new(0, 142, 0, 28)
+PaddingToggleBtn.Position = UDim2.new(0, 15, 0, 290)
+PaddingToggleBtn.Size = UDim2.new(0, 142, 0, 24)
 PaddingToggleBtn.Font = Enum.Font.SourceSansBold
 PaddingToggleBtn.Text = "Padding: ON"
 PaddingToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-PaddingToggleBtn.TextSize = 12
+PaddingToggleBtn.TextSize = 11
 PaddingToggleBtn.ZIndex = 2
-local pCorner = Instance.new("UICorner") pCorner.CornerRadius = UDim.new(0,5) pCorner.Parent = PaddingToggleBtn
+local pCorner = Instance.new("UICorner") pCorner.CornerRadius = UDim.new(0,4) pCorner.Parent = PaddingToggleBtn
 
 PaddingToggleBtn.MouseButton1Click:Connect(function()
     usePadding = not usePadding
@@ -370,14 +338,14 @@ end)
 
 AutoToggleBtn.Parent = MainFrame
 AutoToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-AutoToggleBtn.Position = UDim2.new(0, 172, 0, 310)
-AutoToggleBtn.Size = UDim2.new(0, 142, 0, 28)
+AutoToggleBtn.Position = UDim2.new(0, 172, 0, 290)
+AutoToggleBtn.Size = UDim2.new(0, 142, 0, 24)
 AutoToggleBtn.Font = Enum.Font.SourceSansBold
 AutoToggleBtn.Text = "Auto Pad: ON"
 AutoToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-AutoToggleBtn.TextSize = 12
+AutoToggleBtn.TextSize = 11
 AutoToggleBtn.ZIndex = 2
-local aCorner = Instance.new("UICorner") aCorner.CornerRadius = UDim.new(0,5) aCorner.Parent = AutoToggleBtn
+local aCorner = Instance.new("UICorner") aCorner.CornerRadius = UDim.new(0,4) aCorner.Parent = AutoToggleBtn
 
 AutoToggleBtn.MouseButton1Click:Connect(function()
     autoPadding = not autoPadding
@@ -389,8 +357,8 @@ end)
 ManualContainer.Name = "ManualContainer"
 ManualContainer.Parent = MainFrame
 ManualContainer.BackgroundTransparency = 1
-ManualContainer.Position = UDim2.new(0, 15, 0, 345)
-ManualContainer.Size = UDim2.new(1, -30, 0, 26)
+ManualContainer.Position = UDim2.new(0, 15, 0, 320)
+ManualContainer.Size = UDim2.new(1, -30, 0, 24)
 ManualContainer.Visible = false
 UIListLayout.Parent = ManualContainer
 UIListLayout.FillDirection = Enum.FillDirection.Horizontal
@@ -407,7 +375,7 @@ for i, label in ipairs(paddingLabels) do
     btn.Font = Enum.Font.SourceSansBold
     btn.Text = label
     btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    btn.TextSize = 12
+    btn.TextSize = 11
     btn.ZIndex = 2
     local bC = Instance.new("UICorner") bC.CornerRadius = UDim.new(0,3) bC.Parent = btn
     SelectorButtons[i] = btn
@@ -419,8 +387,8 @@ for i, label in ipairs(paddingLabels) do
     end)
 end
 
-setupSpeedBtn(AntiAfkToggleBtn, "🛡️ ANTI-AFK: ON", UDim2.new(0, 15, 0, 380))
-setupSpeedBtn(AntiFlingToggleBtn, "🛡️ ANTI-FLING: ON", UDim2.new(0, 172, 0, 380))
+setupSpeedBtn(AntiAfkToggleBtn, "🛡️ ANTI-AFK: ON", UDim2.new(0, 15, 0, 350))
+setupSpeedBtn(AntiFlingToggleBtn, "🛡️ ANTI-FLING: ON", UDim2.new(0, 172, 0, 350))
 AntiAfkToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
 AntiFlingToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
 
@@ -439,23 +407,23 @@ end)
 AntiAfkTimerLabel.Name = "AntiAfkTimerLabel"
 AntiAfkTimerLabel.Parent = MainFrame
 AntiAfkTimerLabel.BackgroundTransparency = 1
-AntiAfkTimerLabel.Position = UDim2.new(0, 15, 0, 415)
-AntiAfkTimerLabel.Size = UDim2.new(1, -30, 0, 18)
+AntiAfkTimerLabel.Position = UDim2.new(0, 15, 0, 382)
+AntiAfkTimerLabel.Size = UDim2.new(1, -30, 0, 16)
 AntiAfkTimerLabel.Font = Enum.Font.SourceSansBold
 AntiAfkTimerLabel.Text = "⏱️ AFK Time: 00:00:00"
 AntiAfkTimerLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-AntiAfkTimerLabel.TextSize = 12
+AntiAfkTimerLabel.TextSize = 11
 AntiAfkTimerLabel.ZIndex = 2
 
 AntiAfkCountLabel.Name = "AntiAfkCountLabel"
 AntiAfkCountLabel.Parent = MainFrame
 AntiAfkCountLabel.BackgroundTransparency = 1
-AntiAfkCountLabel.Position = UDim2.new(0, 15, 0, 435)
-AntiAfkCountLabel.Size = UDim2.new(1, -30, 0, 18)
+AntiAfkCountLabel.Position = UDim2.new(0, 15, 0, 400)
+AntiAfkCountLabel.Size = UDim2.new(1, -30, 0, 16)
 AntiAfkCountLabel.Font = Enum.Font.SourceSansBold
 AntiAfkCountLabel.Text = "🔄 Anti-AFK Pulses: 0"
 AntiAfkCountLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
-AntiAfkCountLabel.TextSize = 12
+AntiAfkCountLabel.TextSize = 11
 AntiAfkCountLabel.ZIndex = 2
 
 local VirtualUser = game:GetService("VirtualUser")
@@ -504,25 +472,25 @@ end)
 ToggleBtn.Name = "ToggleBtn"
 ToggleBtn.Parent = MainFrame
 ToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-ToggleBtn.Position = UDim2.new(0, 15, 0, 465)
-ToggleBtn.Size = UDim2.new(1, -30, 0, 40)
+ToggleBtn.Position = UDim2.new(0, 15, 0, 425)
+ToggleBtn.Size = UDim2.new(1, -30, 0, 36)
 ToggleBtn.Font = Enum.Font.SourceSansBold
 ToggleBtn.Text = "▶ START SPAM"
 ToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-ToggleBtn.TextSize = 15
+ToggleBtn.TextSize = 14
 ToggleBtn.ZIndex = 2
-BtnCorner.CornerRadius = UDim.new(0, 7)
+BtnCorner.CornerRadius = UDim.new(0, 6)
 BtnCorner.Parent = ToggleBtn
 
 StatusLabel.Name = "StatusLabel"
 StatusLabel.Parent = MainFrame
 StatusLabel.BackgroundTransparency = 1
-StatusLabel.Position = UDim2.new(0, 0, 0, 515)
-StatusLabel.Size = UDim2.new(1, 0, 0, 20)
+StatusLabel.Position = UDim2.new(0, 0, 0, 468)
+StatusLabel.Size = UDim2.new(1, 0, 0, 18)
 StatusLabel.Font = Enum.Font.SourceSansItalic
 StatusLabel.Text = "Status: Idle"
 StatusLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
-StatusLabel.TextSize = 12
+StatusLabel.TextSize = 11
 StatusLabel.ZIndex = 2
 
 local function SendChatMessage(msg)
@@ -546,6 +514,39 @@ task.spawn(function()
     SendChatMessage("(!)(!)(!)⚠️AYANUU OG SPAMMER LOADED...⚠️(!)(!)(!)")
 end)
 
+-- Default Clean Roast Lines Array Templates
+local BaseRoastTemplates = {
+    "🔮☄️ TMX MAI TOXIC KA %s 😝TAP KARKE BOL %s OP 🔮☄️",
+    "👑🔥 TMX %s GODZILA POWER SONIC BEEM UNLEASHED 1000% MAXIMUM DESTRUCTION OVERLOAD 🔥👑",
+    "🦍⚡ tmx %s SUPER ULTRA BRAZIL TIGER GORILLA PUNCH CRUSHING THE WHOLE SERVER ⚡🦍",
+    "💥☀️ tmx %s MEGA POWER WAVE TSUNAMI BLAST ACTIVATED ACROSS ALL DIMENSIONS ☀️💥",
+    "🦁🐉 tmx %s ULTIMATE APEX PREDATOR MODE: DRAGON RAGE COMBINED WITH TIGER SPEED 🐉🦁",
+    "☄️🦾 tmx %s CYBERNETIC HYPER BEAM: OBLITERATING ALL OPPONENTS IN ONE TAP 🦾☄️",
+    "👑💥 tmx %s SUPREME OVERLORD UNLEASHING 9999X INTERGALACTIC PLASMA EXPLOSION DIRECTLY ON YOUR HEAD 💥👑",
+    "⚡🐉 tmx %s ELECTRIC DRAGON EMBERS BURNING THROUGH ENTIRE LOBBY WITH MAXIMUM VOLTAGE ENERGY ⚡🐉",
+    "🦾🔥 tmx %s CYBER MECHA GODZILA LASER CANNON SHORT-CIRCUITING YOUR WHOLE DEVICE FPS TO ZERO 🔥🦾",
+    "👑🔥 tmx %s SUPREME DIMENSIONAL RULER SUMMONING THE ANCIENT GODZILA FURY TO WIPE THE MAP CLEAN 🔥👑",
+    "⚡🌀 tmx %s QUANTUM TIME-WARP VORTEX SUCKING ALL YOUR SKILLS AND FPS INTO THE DEEP VOID 🌀⚡",
+    "🦾💥 tmx %s UNSTOPPABLE CYBERNETIC APOCALYPSE CRUSHING EVERY OPPONENT WITH 1000000X FORCE 💥🦾",
+    "🐉⭐ tmx %s LEGENDARY DRAGON OVERLORD ASCENSION: THE ENTIRE LOBBY BOWS TO THE TRUE KING ⭐🐉",
+    "🌪️🌊 tmx %s CATEGORY 10 TITAN HURRICANE WIPING OUT EVERY SINGLE PLAYER IN FRACTION OF A SECOND 🌊🌪️",
+    "☄️🥊 tmx %s HYPER SONIC METEOR STRIKE COMBINED WITH JUNGLE KINGDOM FURY CRUSHING ALL DEFENSES 🥊☄️",
+    "🌋☀️ tmx %s MOLTEN MAGMA TSUNAMI FLOODING THE ENTIRE DIMENSION WITH UNSTOPPABLE HEAT PULSE ☀️🌋",
+    "🗿👑 tmx %s THE UNDEFEATED EMPEROR STEPPING INTO THE MAP: EVERYONE KNEEL BEFORE THE REAL %s 👑🗿",
+    "🥶⚡ tmx %s FROSTBITE QUANTUM BEAM TURNING YOUR WHOLE AVATAR INTO FROZEN PIXEL DUST INSTANTLY ⚡🥶",
+    "🦁💫 tmx %s ULTIMATE APEX PREDATOR ROAR CAUSING MAXIMUM DAMAGE OVERLOAD ACROSS THE ENTIRE SERVER 💫🦁",
+    "🏆💥 tmx %s TITANIC BLACK HOLE VOID ABSORBING ENTIRE MAP STRUCTURE WITH UNLEASHED POWER 💥🏆",
+    "✨🌀 tmx %s CELESTIAL PHANTOM BARRAGE STRIKING FROM ALL ANGLES AT LIGHTNING SPEED 🌀✨",
+    "🚀💀 tmx %s OMEGA WARRIOR APOCALYPSE LEAVING NO CHANCE BEFORE THEY EVEN SPAWN IN 💀🚀",
+    "🐅⚡ tmx %s WILD TIGER SPEED OVERDRIVE LEAVING BEHIND A TRAIL OF TOTAL DESTRUCTION AND CHAOS ⚡🐅",
+    "💥⭐ tmx %s COSMIC SUPERNOVA SHOCKWAVE DETONATING IN THE LOBBY: ABSOLUTE WIPE PROTOCOL ACTIVE ⭐💥",
+    "🥊🔥 tmx %s GOD-MODE ULTRA COMBO BREAKING ALL GAME LIMITS AND CRASHING THE OPPONENT VIBE 🔥🥊",
+    "⚡🌀 tmx %s QUANTUM THUNDERSTORM HURRICANE: NO ESCAPE FROM THE SUPREME KING 🌀⚡",
+    "🌋💥 tmx %s VOLCANIC MAGMA OVERDRIVE BURNING DOWN THE MAP TO ABSOLUTE ASHES 💥🌋",
+    "👑⭐ tmx %s GOD-TIER OVERLORD PULSE: BOW DOWN TO THE ONE AND ONLY REAL %s ⭐👑",
+    "🏆🥊 tmx %s UNSTOPPABLE KNOCKOUT FURY SHATTERING ALL SOUND BARRIERS CONTINUOUSLY 🏆🥊"
+}
+
 local SpamLoop = nil
 local IsSpamming = false
 
@@ -562,6 +563,18 @@ ToggleBtn.MouseButton1Click:Connect(function()
             StatusLabel.TextColor3 = Color3.fromRGB(255, 65, 65)
             return
         end
+        
+        local currentCustomName = "AYANUU"
+        if YourNameInput.Text ~= "" and YourNameInput.Text ~= " " then
+            currentCustomName = YourNameInput.Text
+        end
+        
+        local DynamicRoastLines = {}
+        for _, template in ipairs(BaseRoastTemplates) do
+            local formatted = string.gsub(template, "%%s", currentCustomName)
+            table.insert(DynamicRoastLines, formatted)
+        end
+
         IsSpamming = true
         ToggleBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
         ToggleBtn.Text = "🛑 STOP SPAM"
@@ -574,7 +587,7 @@ ToggleBtn.MouseButton1Click:Connect(function()
             local paddingIndex = 1
             while IsSpamming do
                 local CurrentTarget = TargetsList[targetIndex]
-                local CurrentLine = CustomRoastLines[lineIndex]
+                local CurrentLine = DynamicRoastLines[lineIndex]
                 if CustomMsgInput.Text ~= "" then
                     CurrentLine = " " .. CustomMsgInput.Text
                 end
@@ -594,7 +607,7 @@ ToggleBtn.MouseButton1Click:Connect(function()
                 end
                 if CustomMsgInput.Text == "" then
                     lineIndex = lineIndex + 1
-                    if lineIndex > #CustomRoastLines then lineIndex = 1 end
+                    if lineIndex > #DynamicRoastLines then lineIndex = 1 end
                 end
                 targetIndex = targetIndex + 1
                 if targetIndex > #TargetsList then targetIndex = 1 end
