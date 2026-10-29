@@ -43,8 +43,8 @@ local antiAfkActive = true
 local antiFlingActive = true
 local TargetsTextBoxesList = {} 
 
--- 👑 [CUSTOM NAME CONFIGURATION]
-local YourCustomName = "AYANUU" 
+-- 👑 [ROAST NAME CONFIGURATION - YAHAN APNA YA KISI AUR KA NAAM CHANGE KAR SKTE HO ROASTS KE LIYE] 👑
+local YOUR_NAME = "AYANUU" 
 
 -- 5 Heavy Padding Patterns
 local PaddingsList = {
@@ -55,45 +55,45 @@ local PaddingsList = {
     " @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=" 
 }
 
--- Fixed Default Clean Roast Lines Array (Removed all filtered keywords)
+-- Roast Lines Array (Ab yahan YOUR_NAME variable use ho raha hai)
 local CustomRoastLines = {
-    "🔮☄️ TMX MAI TOXIC KA " .. YourCustomName .. "😝TAP KARKE BOL " .. YourCustomName .. " OP 🔮☄️",
-    "👑🔥 TMX " .. YourCustomName .. " GODZILA POWER SONIC BEEM UNLEASHED 1000% MAXIMUM DESTRUCTION OVERLOAD 🔥👑",
-    "🦍⚡ tmx " .. YourCustomName .. " SUPER ULTRA BRAZIL TIGER GORILLA PUNCH CRUSHING THE WHOLE SERVER ⚡🦍",
-    "💥☀️ tmx " .. YourCustomName .. " MEGA POWER WAVE TSUNAMI BLAST ACTIVATED ACROSS ALL DIMENSIONS ☀️💥",
-    "🦁🐉 tmx " .. YourCustomName .. " ULTIMATE APEX PREDATOR MODE: DRAGON RAGE COMBINED WITH TIGER SPEED 🐉🦁",
-    "☄️🦾 tmx " .. YourCustomName .. " CYBERNETIC HYPER BEAM: OBLITERATING ALL OPPONENTS IN ONE TAP 🦾☄️",
-    "👑💥 tmx " .. YourCustomName .. " SUPREME OVERLORD UNLEASHING 9999X INTERGALACTIC PLASMA EXPLOSION DIRECTLY ON YOUR HEAD 💥👑",
-    "⚡🐉 tmx " .. YourCustomName .. " ELECTRIC DRAGON EMBERS BURNING THROUGH ENTIRE LOBBY WITH MAXIMUM VOLTAGE ENERGY ⚡🐉",
-    "🦾🔥 tmx " .. YourCustomName .. " CYBER MECHA GODZILA LASER CANNON SHORT-CIRCUITING YOUR WHOLE DEVICE FPS TO ZERO 🔥🦾",
-    "👑🔥 tmx " .. YourCustomName .. " SUPREME DIMENSIONAL RULER SUMMONING THE ANCIENT GODZILA FURY TO WIPE THE MAP CLEAN 🔥👑",
-    "⚡🌀 tmx " .. YourCustomName .. " QUANTUM TIME-WARP VORTEX SUCKING ALL YOUR SKILLS AND FPS INTO THE DEEP VOID 🌀⚡",
-    "🦾💥 tmx " .. YourCustomName .. " UNSTOPPABLE CYBERNETIC APOCALYPSE CRUSHING EVERY OPPONENT WITH 1000000X FORCE 💥🦾",
-    "🐉⭐ tmx " .. YourCustomName .. " LEGENDARY DRAGON OVERLORD ASCENSION: THE ENTIRE LOBBY BOWS TO THE TRUE KING ⭐🐉",
-    "🌪️🌊 tmx " .. YourCustomName .. " CATEGORY 10 TITAN HURRICANE WIPING OUT EVERY SINGLE PLAYER IN FRACTION OF A SECOND 🌊🌪️",
-    "☄️🥊 tmx " .. YourCustomName .. " HYPER SONIC METEOR STRIKE COMBINED WITH JUNGLE KINGDOM FURY CRUSHING ALL DEFENSES 🥊☄️",
-    "🌋☀️ tmx " .. YourCustomName .. " MOLTEN MAGMA TSUNAMI FLOODING THE ENTIRE DIMENSION WITH UNSTOPPABLE HEAT PULSE ☀️🌋",
-    "🗿👑 tmx " .. YourCustomName .. " THE UNDEFEATED EMPEROR STEPPING INTO THE MAP: EVERYONE KNEEL BEFORE THE REAL " .. YourCustomName .. " 👑🗿",
-    "🥶⚡ tmx " .. YourCustomName .. " FROSTBITE QUANTUM BEAM TURNING YOUR WHOLE AVATAR INTO FROZEN PIXEL DUST INSTANTLY ⚡🥶",
-    "🦁💫 tmx " .. YourCustomName .. " ULTIMATE APEX PREDATOR ROAR CAUSING MAXIMUM DAMAGE OVERLOAD ACROSS THE ENTIRE SERVER 💫🦁",
-    "🏆💥 tmx " .. YourCustomName .. " TITANIC BLACK HOLE VOID ABSORBING ENTIRE MAP STRUCTURE WITH UNLEASHED POWER 💥🏆",
-    "✨🌀 tmx " .. YourCustomName .. " CELESTIAL PHANTOM BARRAGE STRIKING FROM ALL ANGLES AT LIGHTNING SPEED 🌀✨",
-    "🚀💀 tmx " .. YourCustomName .. " OMEGA WARRIOR APOCALYPSE LEAVING NO CHANCE BEFORE THEY EVEN SPAWN IN 💀🚀",
-    "🐅⚡ tmx " .. YourCustomName .. " WILD TIGER SPEED OVERDRIVE LEAVING BEHIND A TRAIL OF TOTAL DESTRUCTION AND CHAOS ⚡🐅",
-    "💥⭐ tmx " .. YourCustomName .. " COSMIC SUPERNOVA SHOCKWAVE DETONATING IN THE LOBBY: ABSOLUTE WIPE PROTOCOL ACTIVE ⭐💥",
-    "🥊🔥 tmx " .. YourCustomName .. " GOD-MODE ULTRA COMBO BREAKING ALL GAME LIMITS AND CRASHING THE OPPONENT VIBE 🔥🥊",
-    "⚡🌀 tmx " .. YourCustomName .. " QUANTUM THUNDERSTORM HURRICANE: NO ESCAPE FROM THE SUPREME KING 🌀⚡",
-    "🌋💥 tmx " .. YourCustomName .. " VOLCANIC MAGMA OVERDRIVE BURNING DOWN THE MAP TO ABSOLUTE ASHES 💥🌋",
-    "👑⭐ tmx " .. YourCustomName .. " GOD-TIER OVERLORD PULSE: BOW DOWN TO THE ONE AND ONLY REAL " .. YourCustomName .. " ⭐👑",
-    "🏆🥊 tmx " .. YourCustomName .. " UNSTOPPABLE KNOCKOUT FURY SHATTERING ALL SOUND BARRIERS CONTINUOUSLY 🥊🏆"
+    "🔮☄️ TMX MAI TOXIC KA " .. YOUR_NAME .. "😝TAP KARKE BOL " .. YOUR_NAME .. " OP 🔮☄️",
+    "👑🔥 TMX " .. YOUR_NAME .. " GODZILA POWER SONIC BEEM UNLEASHED 1000% MAXIMUM DESTRUCTION OVERLOAD 🔥👑",
+    "🦍⚡ tmx " .. YOUR_NAME .. " SUPER ULTRA BRAZIL TIGER GORILLA PUNCH CRUSHING THE WHOLE SERVER ⚡🦍",
+    "💥☀️ tmx " .. YOUR_NAME .. " MEGA POWER WAVE TSUNAMI BLAST ACTIVATED ACROSS ALL DIMENSIONS ☀️💥",
+    "🦁🐉 tmx " .. YOUR_NAME .. " ULTIMATE APEX PREDATOR MODE: DRAGON RAGE COMBINED WITH TIGER SPEED 🐉🦁",
+    "☄️🦾 tmx " .. YOUR_NAME .. " CYBERNETIC HYPER BEAM: OBLITERATING ALL OPPONENTS IN ONE TAP 🦾☄️",
+    "👑💥 tmx " .. YOUR_NAME .. " SUPREME OVERLORD UNLEASHING 9999X INTERGALACTIC PLASMA EXPLOSION DIRECTLY ON YOUR HEAD 💥👑",
+    "⚡🐉 tmx " .. YOUR_NAME .. " ELECTRIC DRAGON EMBERS BURNING THROUGH ENTIRE LOBBY WITH MAXIMUM VOLTAGE ENERGY ⚡🐉",
+    "🦾🔥 tmx " .. YOUR_NAME .. " CYBER MECHA GODZILA LASER CANNON SHORT-CIRCUITING YOUR WHOLE DEVICE FPS TO ZERO 🔥🦾",
+    "👑🔥 tmx " .. YOUR_NAME .. " SUPREME DIMENSIONAL RULER SUMMONING THE ANCIENT GODZILA FURY TO WIPE THE MAP CLEAN 🔥👑",
+    "⚡🌀 tmx " .. YOUR_NAME .. " QUANTUM TIME-WARP VORTEX SUCKING ALL YOUR SKILLS AND FPS INTO THE DEEP VOID 🌀⚡",
+    "🦾💥 tmx " .. YOUR_NAME .. " UNSTOPPABLE CYBERNETIC APOCALYPSE CRUSHING EVERY OPPONENT WITH 1000000X FORCE 💥🦾",
+    "🐉⭐ tmx " .. YOUR_NAME .. " LEGENDARY DRAGON OVERLORD ASCENSION: THE ENTIRE LOBBY BOWS TO THE TRUE KING ⭐🐉",
+    "🌪️🌊 tmx " .. YOUR_NAME .. " CATEGORY 10 TITAN HURRICANE WIPING OUT EVERY SINGLE PLAYER IN FRACTION OF A SECOND 🌊🌪️",
+    "☄️🥊 tmx " .. YOUR_NAME .. " HYPER SONIC METEOR STRIKE COMBINED WITH JUNGLE KINGDOM FURY CRUSHING ALL DEFENSES 🥊☄️",
+    "🌋☀️ tmx " .. YOUR_NAME .. " MOLTEN MAGMA TSUNAMI FLOODING THE ENTIRE DIMENSION WITH UNSTOPPABLE HEAT PULSE ☀️🌋",
+    "🗿👑 tmx " .. YOUR_NAME .. " THE UNDEFEATED EMPEROR STEPPING INTO THE MAP: EVERYONE KNEEL BEFORE THE REAL " .. YOUR_NAME .. " 👑🗿",
+    "🥶⚡ tmx " .. YOUR_NAME .. " FROSTBITE QUANTUM BEAM TURNING YOUR WHOLE AVATAR INTO FROZEN PIXEL DUST INSTANTLY ⚡🥶",
+    "🦁💫 tmx " .. YOUR_NAME .. " ULTIMATE APEX PREDATOR ROAR CAUSING MAXIMUM DAMAGE OVERLOAD ACROSS THE ENTIRE SERVER 💫🦁",
+    "🏆💥 tmx " .. YOUR_NAME .. " TITANIC BLACK HOLE VOID ABSORBING ENTIRE MAP STRUCTURE WITH UNLEASHED POWER 💥🏆",
+    "✨🌀 tmx " .. YOUR_NAME .. " CELESTIAL PHANTOM BARRAGE STRIKING FROM ALL ANGLES AT LIGHTNING SPEED 🌀✨",
+    "🚀💀 tmx " .. YOUR_NAME .. " OMEGA WARRIOR APOCALYPSE LEAVING NO CHANCE BEFORE THEY EVEN SPAWN IN 💀🚀",
+    "🐅⚡ tmx " .. YOUR_NAME .. " WILD TIGER SPEED OVERDRIVE LEAVING BEHIND A TRAIL OF TOTAL DESTRUCTION AND CHAOS ⚡🐅",
+    "💥⭐ tmx " .. YOUR_NAME .. " COSMIC SUPERNOVA SHOCKWAVE DETONATING IN THE LOBBY: ABSOLUTE WIPE PROTOCOL ACTIVE ⭐💥",
+    "🥊🔥 tmx " .. YOUR_NAME .. " GOD-MODE ULTRA COMBO BREAKING ALL GAME LIMITS AND CRASHING THE OPPONENT VIBE 🔥🥊",
+    "⚡🌀 tmx " .. YOUR_NAME .. " QUANTUM THUNDERSTORM HURRICANE: NO ESCAPE FROM THE SUPREME KING 🌀⚡",
+    "🌋💥 tmx " .. YOUR_NAME .. " VOLCANIC MAGMA OVERDRIVE BURNING DOWN THE MAP TO ABSOLUTE ASHES 💥🌋",
+    "👑⭐ tmx " .. YOUR_NAME .. " GOD-TIER OVERLORD PULSE: BOW DOWN TO THE ONE AND ONLY REAL " .. YOUR_NAME .. " ⭐👑",
+    "🏆🥊 tmx " .. YOUR_NAME .. " UNSTOPPABLE KNOCKOUT FURY SHATTERING ALL SOUND BARRIERS CONTINUOUSLY 🥊🏆"
 }
 
--- [RESIZED & SHIFTED] Main Frame Panel Setup
+-- [RESIZED & SHIFTED] Main Frame Panel Setup (Width 330)
 MainFrame.Name = "AyanMultiTargetSpammer"
 MainFrame.Parent = ScreenGui
 MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 20)
-MainFrame.Position = UDim2.new(0.15, 0, 0.12, 0)
-MainFrame.Size = UDim2.new(0, 300, 0, 610) 
+MainFrame.Position = UDim2.new(0.12, 0, 0.10, 0)
+MainFrame.Size = UDim2.new(0, 330, 0, 610) 
 MainFrame.Active = true
 MainFrame.Draggable = true
 UICorner.CornerRadius = UDim.new(0, 12)
@@ -117,7 +117,7 @@ if syn and syn.protect_gui then syn.protect_gui(ScreenGui)
 elseif getgenv and getgenv().protect_gui then getgenv().protect_gui(ScreenGui) end
 ScreenGui.Parent = game:GetService("CoreGui") or game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 
--- 🔴 GOL TOGGLE BUTTON (💀 Skull Circle)
+-- 🔴 GOL TOGGLE BUTTON
 ToggleCircle.Name = "ToggleCircle"
 ToggleCircle.Parent = ScreenGui
 ToggleCircle.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
@@ -147,14 +147,14 @@ ToggleCircle.MouseButton1Click:Connect(function()
     MainFrame.Visible = not MainFrame.Visible
 end)
 
--- Title Header Text
+-- Title Header Text (Fixed to AYANUU)
 Title.Name = "Title"
 Title.Parent = MainFrame
 Title.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
 Title.BackgroundTransparency = 0.3
 Title.Size = UDim2.new(1, 0, 0, 35)
 Title.Font = Enum.Font.SourceSansBold
-Title.Text = "👑 MADE BY " .. YourCustomName .. " 👑"
+Title.Text = "👑 MADE BY AYANUU 👑"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 14
 Title.ZIndex = 2
@@ -206,39 +206,44 @@ local function CreateDynamicTargetRow()
     NewBox.TextSize = 13
     NewBox.ZIndex = 3
     BoxCorner.CornerRadius = UDim.new(0, 5)
-BoxCorner.Parent = NewBox
-DeleteBtn.Name = "DeleteBtn"
-DeleteBtn.Parent = RowFrame
-DeleteBtn.BackgroundColor3 = Color3.fromRGB(180, 40, 40)
-DeleteBtn.Position = UDim2.new(1, -26, 0, 0)
-DeleteBtn.Size = UDim2.new(0, 26, 1, 0)
-DeleteBtn.Font = Enum.Font.SourceSansBold
-DeleteBtn.Text = "❌"
-DeleteBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-DeleteBtn.TextSize = 10
-DeleteBtn.ZIndex = 3
-DelCorner.CornerRadius = UDim.new(0, 5)
-DelCorner.Parent = DeleteBtn
-table.insert(TargetsTextBoxesList, NewBox)
-TargetsScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, TargetsListLayout.AbsoluteContentSize.Y)
-NewBox.FocusLost:Connect(function(enterPressed)
-if NewBox.Text ~= "" and NewBox.Text ~= " " then
-TriggerInteractiveQuestion()
+    BoxCorner.Parent = NewBox
+
+    DeleteBtn.Name = "DeleteBtn"
+    DeleteBtn.Parent = RowFrame
+    DeleteBtn.BackgroundColor3 = Color3.fromRGB(180, 40, 40)
+    DeleteBtn.Position = UDim2.new(1, -26, 0, 0)
+    DeleteBtn.Size = UDim2.new(0, 26, 1, 0)
+    DeleteBtn.Font = Enum.Font.SourceSansBold
+    DeleteBtn.Text = "❌"
+    DeleteBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    DeleteBtn.TextSize = 10
+    DeleteBtn.ZIndex = 3
+    DelCorner.CornerRadius = UDim.new(0, 5)
+    DelCorner.Parent = DeleteBtn
+
+    table.insert(TargetsTextBoxesList, NewBox)
+    TargetsScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, TargetsListLayout.AbsoluteContentSize.Y)
+    
+    NewBox.FocusLost:Connect(function(enterPressed)
+        if NewBox.Text ~= "" and NewBox.Text ~= " " then
+            TriggerInteractiveQuestion()
+        end
+    end)
+    
+    DeleteBtn.MouseButton1Click:Connect(function()
+        for idx, trackedBox in ipairs(TargetsTextBoxesList) do
+            if trackedBox == NewBox then
+                table.remove(TargetsTextBoxesList, idx)
+                break
+            end
+        end
+        RowFrame:Destroy()
+        task.wait(0.05)
+        TargetsScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, TargetsListLayout.AbsoluteContentSize.Y)
+    end)
 end
-end)
-DeleteBtn.MouseButton1Click:Connect(function()
-for idx, trackedBox in ipairs(TargetsTextBoxesList) do
-if trackedBox == NewBox then
-table.remove(TargetsTextBoxesList, idx)
-break
-end
-end
-RowFrame:Destroy()
-task.wait(0.05)
-TargetsScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, TargetsListLayout.AbsoluteContentSize.Y)
-end)
-end
--- [INTERACTIVE DIALOG FRAME INFRASTRUCTURE RESIZED FOR WIDER LAYOUT]
+
+-- [INTERACTIVE DIALOG FRAME]
 DialogFrame.Name = "DialogFrame"
 DialogFrame.Parent = MainFrame
 DialogFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 45)
@@ -247,6 +252,7 @@ DialogFrame.Position = UDim2.new(0, 15, 0, 175)
 DialogFrame.Size = UDim2.new(1, -30, 0, 55)
 DialogFrame.Visible = true
 local dFCorner = Instance.new("UICorner") dFCorner.CornerRadius = UDim.new(0,6) dFCorner.Parent = DialogFrame
+
 DialogLabel.Parent = DialogFrame
 DialogLabel.BackgroundTransparency = 1
 DialogLabel.Position = UDim2.new(0, 5, 0, 4)
@@ -256,120 +262,130 @@ DialogLabel.Text = "❓ Do you want another target?"
 DialogLabel.TextColor3 = Color3.fromRGB(255, 215, 0)
 DialogLabel.TextSize = 13
 DialogLabel.ZIndex = 3
+
 local function configureDialogButton(btn, text, pos, bgCol)
-btn.Parent = DialogFrame
-btn.BackgroundColor3 = bgCol
-btn.Position = pos
-btn.Size = UDim2.new(0, 120, 0, 22)
-btn.Font = Enum.Font.SourceSansBold
-btn.Text = text
-btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-btn.TextSize = 12
-btn.ZIndex = 3
-local c = Instance.new("UICorner") c.CornerRadius = UDim.new(0,4) c.Parent = btn
+    btn.Parent = DialogFrame
+    btn.BackgroundColor3 = bgCol
+    btn.Position = pos
+    btn.Size = UDim2.new(0, 135, 0, 22)
+    btn.Font = Enum.Font.SourceSansBold
+    btn.Text = text
+    btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    btn.TextSize = 12
+    btn.ZIndex = 3
+    local c = Instance.new("UICorner") c.CornerRadius = UDim.new(0,4) c.Parent = btn
 end
+
 configureDialogButton(YesBtn, "✔ YES (Add More)", UDim2.new(0, 8, 0, 26), Color3.fromRGB(40, 140, 40))
-configureDialogButton(NoBtn, "❌ NO (Lock List)", UDim2.new(0, 142, 0, 26), Color3.fromRGB(140, 40, 40))
+configureDialogButton(NoBtn, "❌ NO (Lock List)", UDim2.new(0, 152, 0, 26), Color3.fromRGB(140, 40, 40))
+
 YesBtn.MouseButton1Click:Connect(function()
-CreateDynamicTargetRow()
-StatusLabel.Text = "Status: New input slot added below!"
-StatusLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
+    CreateDynamicTargetRow()
+    StatusLabel.Text = "Status: New input slot added below!"
+    StatusLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
 end)
+
 NoBtn.MouseButton1Click:Connect(function()
-DialogFrame.Visible = false
-StatusLabel.Text = "Status: Targets list locked successfully."
-StatusLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+    DialogFrame.Visible = false
+    StatusLabel.Text = "Status: Targets list locked successfully."
+    StatusLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
 end)
--- Spawn the first target slot container instantly on injection
+
 CreateDynamicTargetRow()
--- Custom Message TextBox Generator
+
 local function CreateTextBox(placeholder, pos)
-local box = Instance.new("TextBox")
-box.Parent = MainFrame
-box.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
-box.BackgroundTransparency = 0.2
-box.Position = pos
-box.Size = UDim2.new(1, -30, 0, 26)
-box.Font = Enum.Font.SourceSans
-box.PlaceholderText = placeholder
-box.Text = ""
-box.TextColor3 = Color3.fromRGB(255, 255, 255)
-box.TextSize = 13
-box.ZIndex = 2
-local corner = Instance.new("UICorner")
-corner.CornerRadius = UDim.new(0, 5)
-corner.Parent = box
-return box
+    local box = Instance.new("TextBox")
+    box.Parent = MainFrame
+    box.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
+    box.BackgroundTransparency = 0.2
+    box.Position = pos
+    box.Size = UDim2.new(1, -30, 0, 26)
+    box.Font = Enum.Font.SourceSans
+    box.PlaceholderText = placeholder
+    box.Text = ""
+    box.TextColor3 = Color3.fromRGB(255, 255, 255)
+    box.TextSize = 13
+    box.ZIndex = 2
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 5)
+    corner.Parent = box
+    return box
 end
+
 local CustomMsgInput = CreateTextBox("Type Custom Message...", UDim2.new(0, 15, 0, 240))
 CustomMsgInput.PlaceholderColor3 = Color3.fromRGB(0, 255, 255)
--- Speed Button UI Elements
+
 local FastBtn = Instance.new("TextButton")
 local SlowBtn = Instance.new("TextButton")
 local UserDefinedDelay = 2.5
+
 local function setupSpeedBtn(btn, text, pos)
-btn.Parent = MainFrame
-btn.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
-btn.Position = pos
-btn.Size = UDim2.new(0, 130, 0, 28)
-btn.Font = Enum.Font.SourceSansBold
-btn.Text = text
-btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-btn.TextSize = 13
-btn.ZIndex = 2
-local c = Instance.new("UICorner") c.CornerRadius = UDim.new(0,5) c.Parent = btn
+    btn.Parent = MainFrame
+    btn.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
+    btn.Position = pos
+    btn.Size = UDim2.new(0, 142, 0, 28)
+    btn.Font = Enum.Font.SourceSansBold
+    btn.Text = text
+    btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    btn.TextSize = 13
+    btn.ZIndex = 2
+    local c = Instance.new("UICorner") c.CornerRadius = UDim.new(0,5) c.Parent = btn
 end
+
 setupSpeedBtn(FastBtn, "⚡ FAST MODE", UDim2.new(0, 15, 0, 275))
-setupSpeedBtn(SlowBtn, "🐢 SLOW MODE", UDim2.new(0, 155, 0, 275))
+setupSpeedBtn(SlowBtn, "🐢 SLOW MODE", UDim2.new(0, 172, 0, 275))
+
 FastBtn.MouseButton1Click:Connect(function()
-UserDefinedDelay = 0.4
-FastBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
-SlowBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
+    UserDefinedDelay = 0.4
+    FastBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
+    SlowBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
 end)
+
 SlowBtn.MouseButton1Click:Connect(function()
-UserDefinedDelay = 4.0
-SlowBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
-FastBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
+    UserDefinedDelay = 4.0
+    SlowBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
+    FastBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
 end)
--- Toggles configuration state variables
+
 local usePadding = true
 local autoPadding = true
 local manualPaddingIndex = 5
--- Toggle Padding Button
+
 PaddingToggleBtn.Parent = MainFrame
 PaddingToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
 PaddingToggleBtn.Position = UDim2.new(0, 15, 0, 310)
-PaddingToggleBtn.Size = UDim2.new(0, 130, 0, 28)
+PaddingToggleBtn.Size = UDim2.new(0, 142, 0, 28)
 PaddingToggleBtn.Font = Enum.Font.SourceSansBold
 PaddingToggleBtn.Text = "Padding: ON"
 PaddingToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 PaddingToggleBtn.TextSize = 12
 PaddingToggleBtn.ZIndex = 2
 local pCorner = Instance.new("UICorner") pCorner.CornerRadius = UDim.new(0,5) pCorner.Parent = PaddingToggleBtn
+
 PaddingToggleBtn.MouseButton1Click:Connect(function()
-usePadding = not usePadding
-PaddingToggleBtn.BackgroundColor3 = usePadding and Color3.fromRGB(40, 180, 40) or Color3.fromRGB(180, 40, 40)
-PaddingToggleBtn.Text = usePadding and "Padding: ON" or "Padding: OFF"
+    usePadding = not usePadding
+    PaddingToggleBtn.BackgroundColor3 = usePadding and Color3.fromRGB(40, 180, 40) or Color3.fromRGB(180, 40, 40)
+    PaddingToggleBtn.Text = usePadding and "Padding: ON" or "Padding: OFF"
 end)
 
--- Toggle Auto Padding Button
 AutoToggleBtn.Parent = MainFrame
 AutoToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-AutoToggleBtn.Position = UDim2.new(0, 155, 0, 310)
-AutoToggleBtn.Size = UDim2.new(0, 130, 0, 28)
+AutoToggleBtn.Position = UDim2.new(0, 172, 0, 310)
+AutoToggleBtn.Size = UDim2.new(0, 142, 0, 28)
 AutoToggleBtn.Font = Enum.Font.SourceSansBold
 AutoToggleBtn.Text = "Auto Pad: ON"
 AutoToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 AutoToggleBtn.TextSize = 12
 AutoToggleBtn.ZIndex = 2
 local aCorner = Instance.new("UICorner") aCorner.CornerRadius = UDim.new(0,5) aCorner.Parent = AutoToggleBtn
+
 AutoToggleBtn.MouseButton1Click:Connect(function()
-autoPadding = not autoPadding
-AutoToggleBtn.BackgroundColor3 = autoPadding and Color3.fromRGB(40, 180, 40) or Color3.fromRGB(180, 40, 40)
-AutoToggleBtn.Text = autoPadding and "Auto Pad: ON" or "Auto Pad: OFF"
-ManualContainer.Visible = not autoPadding
+    autoPadding = not autoPadding
+    AutoToggleBtn.BackgroundColor3 = autoPadding and Color3.fromRGB(40, 180, 40) or Color3.fromRGB(180, 40, 40)
+    AutoToggleBtn.Text = autoPadding and "Auto Pad: ON" or "Auto Pad: OFF"
+    ManualContainer.Visible = not autoPadding
 end)
--- Manual Selector Container Layout Setup Row Frame
+
 ManualContainer.Name = "ManualContainer"
 ManualContainer.Parent = MainFrame
 ManualContainer.BackgroundTransparency = 1
@@ -379,43 +395,47 @@ ManualContainer.Visible = false
 UIListLayout.Parent = ManualContainer
 UIListLayout.FillDirection = Enum.FillDirection.Horizontal
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 5)
+UIListLayout.Padding = UDim.new(0, 4)
+
 local SelectorButtons = {}
 local paddingLabels = {"__", "--", "o_O", "(!)", "@="}
 for i, label in ipairs(paddingLabels) do
-local btn = Instance.new("TextButton")
-btn.Parent = ManualContainer
-btn.BackgroundColor3 = (i == manualPaddingIndex) and Color3.fromRGB(220, 50, 50) or Color3.fromRGB(45, 45, 50)
-btn.Size = UDim2.new(0, 50, 1, 0)
-btn.Font = Enum.Font.SourceSansBold
-btn.Text = label
-btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-btn.TextSize = 12
-btn.ZIndex = 2
-local bC = Instance.new("UICorner") bC.CornerRadius = UDim.new(0,3) bC.Parent = btn
-SelectorButtons[i] = btn
-btn.MouseButton1Click:Connect(function()
-manualPaddingIndex = i
-for idx, b in ipairs(SelectorButtons) do
-b.BackgroundColor3 = (idx == manualPaddingIndex) and Color3.fromRGB(220, 50, 50) or Color3.fromRGB(45, 45, 50)
+    local btn = Instance.new("TextButton")
+    btn.Parent = ManualContainer
+    btn.BackgroundColor3 = (i == manualPaddingIndex) and Color3.fromRGB(220, 50, 50) or Color3.fromRGB(45, 45, 50)
+    btn.Size = UDim2.new(0, 56, 1, 0)
+    btn.Font = Enum.Font.SourceSansBold
+    btn.Text = label
+    btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    btn.TextSize = 12
+    btn.ZIndex = 2
+    local bC = Instance.new("UICorner") bC.CornerRadius = UDim.new(0,3) bC.Parent = btn
+    SelectorButtons[i] = btn
+    btn.MouseButton1Click:Connect(function()
+        manualPaddingIndex = i
+        for idx, b in ipairs(SelectorButtons) do
+            b.BackgroundColor3 = (idx == manualPaddingIndex) and Color3.fromRGB(220, 50, 50) or Color3.fromRGB(45, 45, 50)
+        end
+    end)
 end
-end)
-end
--- [BIY ENGINE SYSTEMS PROTECTION SLOTS]
+
 setupSpeedBtn(AntiAfkToggleBtn, "🛡️ ANTI-AFK: ON", UDim2.new(0, 15, 0, 380))
-setupSpeedBtn(AntiFlingToggleBtn, "🛡️ ANTI-FLING: ON", UDim2.new(0, 155, 0, 380))
+setupSpeedBtn(AntiFlingToggleBtn, "🛡️ ANTI-FLING: ON", UDim2.new(0, 172, 0, 380))
 AntiAfkToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
 AntiFlingToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
+
 AntiAfkToggleBtn.MouseButton1Click:Connect(function()
-antiAfkActive = not antiAfkActive
-AntiAfkToggleBtn.BackgroundColor3 = antiAfkActive and Color3.fromRGB(40, 180, 40) or Color3.fromRGB(180, 40, 40)
-AntiAfkToggleBtn.Text = antiAfkActive and "🛡️ ANTI-AFK: ON" or "🛡️ ANTI-AFK: OFF"
+    antiAfkActive = not antiAfkActive
+    AntiAfkToggleBtn.BackgroundColor3 = antiAfkActive and Color3.fromRGB(40, 180, 40) or Color3.fromRGB(180, 40, 40)
+    AntiAfkToggleBtn.Text = antiAfkActive and "🛡️ ANTI-AFK: ON" or "🛡️ ANTI-AFK: OFF"
 end)
+
 AntiFlingToggleBtn.MouseButton1Click:Connect(function()
-antiFlingActive = not antiFlingActive
-AntiFlingToggleBtn.BackgroundColor3 = antiFlingActive and Color3.fromRGB(40, 180, 40) or Color3.fromRGB(180, 40, 40)
-AntiFlingToggleBtn.Text = antiFlingActive and "🛡️ ANTI-FLING: ON" or "🛡️ ANTI-FLING: OFF"
+    antiFlingActive = not antiFlingActive
+    AntiFlingToggleBtn.BackgroundColor3 = antiFlingActive and Color3.fromRGB(40, 180, 40) or Color3.fromRGB(180, 40, 40)
+    AntiFlingToggleBtn.Text = antiFlingActive and "🛡️ ANTI-FLING: ON" or "🛡️ ANTI-FLING: OFF"
 end)
+
 AntiAfkTimerLabel.Name = "AntiAfkTimerLabel"
 AntiAfkTimerLabel.Parent = MainFrame
 AntiAfkTimerLabel.BackgroundTransparency = 1
@@ -426,6 +446,7 @@ AntiAfkTimerLabel.Text = "⏱️ AFK Time: 00:00:00"
 AntiAfkTimerLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 AntiAfkTimerLabel.TextSize = 12
 AntiAfkTimerLabel.ZIndex = 2
+
 AntiAfkCountLabel.Name = "AntiAfkCountLabel"
 AntiAfkCountLabel.Parent = MainFrame
 AntiAfkCountLabel.BackgroundTransparency = 1
@@ -436,51 +457,50 @@ AntiAfkCountLabel.Text = "🔄 Anti-AFK Pulses: 0"
 AntiAfkCountLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
 AntiAfkCountLabel.TextSize = 12
 AntiAfkCountLabel.ZIndex = 2
--- VirtualUser Engine Ticker Pulse Links
+
 local VirtualUser = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:Connect(function()
-if antiAfkActive then
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new(0,0))
-afkCounterValue = afkCounterValue + 1
-AntiAfkCountLabel.Text = "🔄 Anti-AFK Pulses: " .. tostring(afkCounterValue)
-end
+    if antiAfkActive then
+        VirtualUser:CaptureController()
+        VirtualUser:ClickButton2(Vector2.new(0,0))
+        afkCounterValue = afkCounterValue + 1
+        AntiAfkCountLabel.Text = "🔄 Anti-AFK Pulses: " .. tostring(afkCounterValue)
+    end
 end)
 
--- Live Duration Clock Worker loop task
 task.spawn(function()
-while true do
-task.wait(1)
-if antiAfkActive then
-local delta = os.time() - startTimeRef
-local hours = math.floor(delta / 3600)
-local minutes = math.floor((delta % 3600) / 60)
-local seconds = delta % 60
-AntiAfkTimerLabel.Text = string.format("⏱️ AFK Time: %02d:%02d:%02d", hours, minutes, seconds)
-end
-end
+    while true do
+        task.wait(1)
+        if antiAfkActive then
+            local delta = os.time() - startTimeRef
+            local hours = math.floor(delta / 3600)
+            local minutes = math.floor((delta % 3600) / 60)
+            local seconds = delta % 60
+            AntiAfkTimerLabel.Text = string.format("⏱️ AFK Time: %02d:%02d:%02d", hours, minutes, seconds)
+        end
+    end
 end)
--- Stabilization anti fling background physics task loop
+
 task.spawn(function()
-while true do
-if antiFlingActive then
-pcall(function()
-local p = game:GetService("Players").LocalPlayer
-if p.Character then
-for _, part in pairs(p.Character:GetDescendants()) do
-if part:IsA("BasePart") then
-part.CanCollide = false
-part.Velocity = Vector3.new(0,0,0)
-part.RotVelocity = Vector3.new(0,0,0)
-end
-end
-end
+    while true do
+        if antiFlingActive then
+            pcall(function()
+                local p = game:GetService("Players").LocalPlayer
+                if p.Character then
+                    for _, part in pairs(p.Character:GetDescendants()) do
+                        if part:IsA("BasePart") then
+                            part.CanCollide = false
+                            part.Velocity = Vector3.new(0,0,0)
+                            part.RotVelocity = Vector3.new(0,0,0)
+                        end
+                    end
+                end
+            end)
+        end
+        task.wait(0.2)
+    end
 end)
-end
-task.wait(0.2)
-end
-end)
--- Master Ignition Control Trigger Button (START/STOP)
+
 ToggleBtn.Name = "ToggleBtn"
 ToggleBtn.Parent = MainFrame
 ToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
@@ -493,7 +513,7 @@ ToggleBtn.TextSize = 15
 ToggleBtn.ZIndex = 2
 BtnCorner.CornerRadius = UDim.new(0, 7)
 BtnCorner.Parent = ToggleBtn
--- Operational Status indicators row
+
 StatusLabel.Name = "StatusLabel"
 StatusLabel.Parent = MainFrame
 StatusLabel.BackgroundTransparency = 1
@@ -504,89 +524,94 @@ StatusLabel.Text = "Status: Idle"
 StatusLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
 StatusLabel.TextSize = 12
 StatusLabel.ZIndex = 2
--- Universal Chat Core Sender Link
+
 local function SendChatMessage(msg)
-local TextChatService = game:GetService("TextChatService")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
-local textChannel = TextChatService.TextChannels:FindFirstChild("RBXGeneral")
-if textChannel then textChannel:SendAsync(msg) end
-else
-local chatEvents = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
-if chatEvents then
-local sayMessage = chatEvents:FindFirstChild("SayMessageRequest")
-if sayMessage then sayMessage:FireServer(msg, "All") end
+    local TextChatService = game:GetService("TextChatService")
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+    if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+        local textChannel = TextChatService.TextChannels:FindFirstChild("RBXGeneral")
+        if textChannel then textChannel:SendAsync(msg) end
+    else
+        local chatEvents = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
+        if chatEvents then
+            local sayMessage = chatEvents:FindFirstChild("SayMessageRequest")
+            if sayMessage then sayMessage:FireServer(msg, "All") end
+        end
+    end
 end
-end
-end
--- On-Execution initialization chat alert Hook
+
+-- Startup chat message (Fixed to AYANUU)
 task.spawn(function()
-task.wait(1)
-SendChatMessage("(!)(!)(!)⚠️" .. YourCustomName:upper() .. " OG SPAMMER LOADED...⚠️(!)(!)(!)")
+    task.wait(1)
+    SendChatMessage("(!)(!)(!)⚠️AYANUU OG SPAMMER LOADED...⚠️(!)(!)(!)")
 end)
+
 local SpamLoop = nil
 local IsSpamming = false
+
 ToggleBtn.MouseButton1Click:Connect(function()
-if not IsSpamming then
-local TargetsList = {}
-for _, box in ipairs(TargetsTextBoxesList) do
-if box.Text ~= "" and box.Text ~= " " then
-table.insert(TargetsList, box.Text)
-end
-end
-if #TargetsList == 0 then
-StatusLabel.Text = "❌ Write at least 1 valid name!"
-StatusLabel.TextColor3 = Color3.fromRGB(255, 65, 65)
-return
-end
-IsSpamming = true
-ToggleBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
-ToggleBtn.Text = "🛑 STOP SPAM"
-StatusLabel.Text = "⚡ Active (" .. #TargetsList .. " Targets)"
-StatusLabel.TextColor3 = Color3.fromRGB(65, 255, 65)
-SpamLoop = task.spawn(function()
-local lineIndex = 1
-local targetIndex = 1
-local paddingIndex = 1
-while IsSpamming do
-local CurrentTarget = TargetsList[targetIndex]
-local CurrentLine = CustomRoastLines[lineIndex]
-if CustomMsgInput.Text ~= "" then
-CurrentLine = " " .. CustomMsgInput.Text
-end
-local SelectedPadding = ""
-if usePadding then
-if autoPadding then
-SelectedPadding = PaddingsList[paddingIndex] .. " "
-else
-SelectedPadding = PaddingsList[manualPaddingIndex] .. " "
-end
-end
-local FinalFormattedMessage = SelectedPadding .. "[" .. CurrentTarget .. "]" .. CurrentLine
-SendChatMessage(FinalFormattedMessage)
-if usePadding and autoPadding then
-paddingIndex = paddingIndex + 1
-if paddingIndex > #PaddingsList then paddingIndex = 1 end
-end
-if CustomMsgInput.Text == "" then
-lineIndex = lineIndex + 1
-if lineIndex > #CustomRoastLines then lineIndex = 1 end
-end
-targetIndex = targetIndex + 1
-if targetIndex > #TargetsList then targetIndex = 1 end
-task.wait(UserDefinedDelay)
-end
+    if not IsSpamming then
+        local TargetsList = {}
+        for _, box in ipairs(TargetsTextBoxesList) do
+            if box.Text ~= "" and box.Text ~= " " then
+                table.insert(TargetsList, box.Text)
+            end
+        end
+        if #TargetsList == 0 then
+            StatusLabel.Text = "❌ Write at least 1 valid name!"
+            StatusLabel.TextColor3 = Color3.fromRGB(255, 65, 65)
+            return
+        end
+        IsSpamming = true
+        ToggleBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
+        ToggleBtn.Text = "🛑 STOP SPAM"
+        StatusLabel.Text = "⚡ Active (" .. #TargetsList .. " Targets)"
+        StatusLabel.TextColor3 = Color3.fromRGB(65, 255, 65)
+        
+        SpamLoop = task.spawn(function()
+            local lineIndex = 1
+            local targetIndex = 1
+            local paddingIndex = 1
+            while IsSpamming do
+                local CurrentTarget = TargetsList[targetIndex]
+                local CurrentLine = CustomRoastLines[lineIndex]
+                if CustomMsgInput.Text ~= "" then
+                    CurrentLine = " " .. CustomMsgInput.Text
+                end
+                local SelectedPadding = ""
+                if usePadding then
+                    if autoPadding then
+                        SelectedPadding = PaddingsList[paddingIndex] .. " "
+                    else
+                        SelectedPadding = PaddingsList[manualPaddingIndex] .. " "
+                    end
+                end
+                local FinalFormattedMessage = SelectedPadding .. "[" .. CurrentTarget .. "]" .. CurrentLine
+                SendChatMessage(FinalFormattedMessage)
+                if usePadding and autoPadding then
+                    paddingIndex = paddingIndex + 1
+                    if paddingIndex > #PaddingsList then paddingIndex = 1 end
+                end
+                if CustomMsgInput.Text == "" then
+                    lineIndex = lineIndex + 1
+                    if lineIndex > #CustomRoastLines then lineIndex = 1 end
+                end
+                targetIndex = targetIndex + 1
+                if targetIndex > #TargetsList then targetIndex = 1 end
+                task.wait(UserDefinedDelay)
+            end
+        end)
+    else
+        IsSpamming = false
+        if SpamLoop then
+            task.cancel(SpamLoop)
+            SpamLoop = nil
+        end
+        ToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
+        ToggleBtn.Text = "▶ START SPAM"
+        StatusLabel.Text = "Status: Stopped"
+        StatusLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
+    end
 end)
-else
-IsSpamming = false
-if SpamLoop then
-task.cancel(SpamLoop)
-SpamLoop = nil
-end
-ToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 180, 40)
-ToggleBtn.Text = "▶ START SPAM"
-StatusLabel.Text = "Status: Stopped"
-StatusLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
-end
-end)
+
 print("AYAN Conversational Thick Target Edition V5.1 Loaded!")
