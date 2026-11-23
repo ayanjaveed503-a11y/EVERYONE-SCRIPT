@@ -195,7 +195,7 @@ AfkToggleBtn.MouseButton1Click:Connect(function()
 	end
 end)
 
--- Slow / Fast Speed Button (Replaces Delay Speed)
+-- Slow / Fast Speed Button
 local isFastMode = false
 
 local SpeedModeBtn = Instance.new("TextButton")
@@ -623,7 +623,7 @@ task.spawn(function()
 end)
 
 ----------------------------------------------------------------
--- 9. UNIVERSAL CHAT SENDER & HEAVY SYMBOL SPAM ENGINE
+-- 9. UNIVERSAL CHAT SENDER & 10-WORD RESERVED SYMBOL ENGINE
 ----------------------------------------------------------------
 local function sendChat(msg)
 	local sent = false
@@ -664,40 +664,40 @@ local function collectTargets()
 	return list
 end
 
--- Heavy & Extended Symbol Patterns
-local symbolPatterns = {
-	"+++---+++//===//===\\\\\\\\-+++---+++//===//===\\\\\\\\+++---+++//===//===\\\\\\\\+++---+++//===//===",
-	"///===/\\==\\\\V//==\\\\\\\\==\\\\V//===/\\==\\\\V//===/\\==\\\\V//===/\\==\\\\V//===/\\==\\\\V//===/",
-	"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-	"===///===\\\\\\===///===\\\\\\===///===\\\\\\===///===\\\\\\===///===\\\\\\===///===\\\\\\===///===",
-	"###$$$%%%&&&***+++===---///\\\\\\###$$$%%%&&&***+++===---///\\\\\\###$$$%%%&&&***+++===---///\\\\\\",
-	"<<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<<>>><<"
+-- Base symbol chunks to repeat into available space
+local symbolChunks = {
+	"+++---+++//===//===\\\\\\-",
+	"///===/\\==\\\\V//==\\\\\\\\==\\\\V",
+	"@@@@@@@@@@@@@@@",
+	"===///===\\\\\\===///===\\\\\\",
+	"-_-_-_-_-_-_-_-_-_-_-_-_-_-",
+	"$_$_$_$_$_$_$_$_$_$_$_$_$"
 }
 
--- 10 Fresh High-Impact Messages
+-- Reserve ~75 chars for 10 words + target + spacing so chat stays within ~185 safe chars
+local function buildFittedSymbol(baseSym, reservedLen)
+	local maxSymLen = math.max(12, 185 - reservedLen)
+	if baseSym == "" then
+		baseSym = symbolChunks[1]
+	end
+	local reps = math.max(1, math.ceil(maxSymLen / #baseSym))
+	return string.sub(string.rep(baseSym, reps), 1, maxSymLen)
+end
+
+-- 12 New Messages
 local shivMessages = {
-	"TMK MARE⚡ GODZILA POWER SONIC BEEM UNLEASHED 100% MAXIMUM DESTRUCTION OVERLOAD 🔥💥",
-	"TMX MEH 🦍 SUPER ULTRA BRAZIL TIGER GORILLA PUNCH COMING THROUGH WITH UNSTOPPABLE JUNGLE FURY RAGE 🐯🌪️",
-	"TMK MARE 🌊 SUPER MEGA POWER WAVE TSUNAMI BLAST ACTIVATED ACROSS THE ENTIRE SERVER DIMENSION 💨🚀",
-	"TMX MEH 🐅 ULTIMATE BEAST MODE ACTIVATED: GODZILA ROAR COMBINED WITH TIGER SPEED AND GORILLA SMASH 🦖🔥",
-	"TMK MARE⚡ ULTIMATE SONIC BEEM DESTRUCTION RAY BURNING DOWN EVERYTHING IN SIGHT 💥⚡",
 	"TMKx MARE 💫 SONIC BEEM LIGHTNING SPEED DASH ACROSS ALL SERVERS 👅✨",
-    "TMKx MARE 👑 BRAZIL TIGER JUNGLE KING DOMINATION REIGNING SUPREME OVER EVERYONE ",
-    "TMKx MARE 🥰 MEGA POWER WAVE TIDAL WAVE ONSLAUGHT SWEEPING AWAY ALL DEFENSES ☄️✨",
-    "TBKx MARE 🥶 ULTIMATE GODZILA HEAT RAY MELTDOWN CAUSING VOLCANIC ERUPTIONS EVERYWHERE 💫✨",
-    "TMKx MARE 💀 GORILLA POWER FIST OF FURY SMASHING THROUGH SOLID STEEL WALLS ✨💢",
-    " TBKx MARE 🤡 SONIC BEEM INFINITE ENERGY REACTOR CORE OVERLOAD 💫👅",
-    "TMKx MEH 😂 BRAZIL TIGER PHANTOM DASH STRIKE INVISIBLE TO THE NAKED EYE ✨💫",
-    "TBKx MEH 💩 SUPER MEGA POWER WAVE HURRICANE FORCE WINDS TEARING DOWN THE SKIES ☄️☄️",
-    "TMKx MEH 😍 GODZILA EARTH SHATTERING FOOTSTEP MAKING EVERYONE STUMBLE AND FALL 🍁👅",
-    "TBKx MARE 🫯 GORILLA MEGA BRAWL CHAMPION UNDEFEATED TORNADO OF PURE DESTRUCTION ☄️✨",
-    "TMKx MARE REX ULTIMATE GODZILA + GORILLA + TIGER COMBINED ALLIANCE FORCE 👽☄️",
-    "TMKx MARE 💢 FINAL WARNING: SONIC BEEM + MEGA POWER WAVE TOTALLY DOMINATING THE GAME FOREVER ✨👅"
-	"TMX MEH 🦍 BRAZIL TIGER HYPER DRIFT KICK MEETS GORILLA EARTHQUAKE SMASH COMBO OF DOOM 🌍💪",
-	"TMK MARE 🌊 MEGA POWER WAVE IS OVERWHELMING THE ENTIRE SERVER WITH TIDAL WAVE TSUNAMI ENERGY ⚡🌊",
-	"TMX MEH 🦖 WARNING: SHIV POWER IS COMPLETELY UNSTOPPABLE IN THE CHAT ROOM RIGHT NOW 👑📢",
-	"TMK MARE 🦍 GORILLA PUNCH EARTHQUAKE SHAKE CAUSING MASSIVE DAMAGE EVERYWHERE 🌍📉💥",
-	"TMX MEH ⚡ SONIC BEEM CHARGING UP TO MAXIMUM OVERDRIVE POWER LEVEL INFINITE LIGHTNING SPEED 🔋♾️"
+	"TMKx MARE ⚡ BRAZIL TIGER JUNGLE KING DOMINATION REIGNING SUPREME OVER EVERYONE",
+	"TMKx MARE 👑 MEGA POWER WAVE TIDAL WAVE ONSLAUGHT SWEEPING AWAY ALL DEFENSES ☄️✨",
+	"TBKx MARE 🔥 ULTIMATE GODZILA HEAT RAY MELTDOWN CAUSING VOLCANIC ERUPTIONS EVERYWHERE 💫✨",
+	"TMKx MARE ☠️ GORILLA POWER FIST OF FURY SMASHING THROUGH SOLID STEEL WALLS ✨💢",
+	"TBKx MARE 😈 SONIC BEEM INFINITE ENERGY REACTOR CORE OVERLOAD 💫👅",
+	"TMKx MEH 🤡 BRAZIL TIGER PHANTOM DASH STRIKE INVISIBLE TO THE NAKED EYE ✨💫",
+	"TBKx MEH 💩 SUPER MEGA POWER WAVE HURRICANE FORCE WINDS TEARING DOWN THE SKIES ☄️☄️",
+	"TMKx MEH 😍 GODZILA EARTH SHATTERING FOOTSTEP MAKING EVERYONE STUMBLE AND FALL 🍁👅",
+	"TBKx MARE 🥶 GORILLA MEGA BRAWL CHAMPION UNDEFEATED TORNADO OF PURE DESTRUCTION ☄️✨",
+	"TMKx MARE REX ULTIMATE GODZILA + GORILLA + TIGER COMBINED ALLIANCE FORCE 👽☄️",
+	"TMKx MARE 💢 FINAL WARNING: SONIC BEEM + MEGA POWER WAVE TOTALLY DOMINATING THE GAME FOREVER ✨👅"
 }
 
 local isRunning = false
@@ -735,21 +735,21 @@ task.spawn(function()
 					targetIdx = targetIdx + 1
 				end
 
-				local activePattern = ""
+				local rawSym = ""
 				if autoSymbolsActive then
-					activePattern = symbolPatterns[symIdx]
-					symIdx = (symIdx % #symbolPatterns) + 1
+					rawSym = symbolChunks[symIdx]
+					symIdx = (symIdx % #symbolChunks) + 1
 				else
-					local customSym = SymbolBox.Text
-					if customSym == "" then
-						activePattern = symbolPatterns[1]
-					else
-						local repeatCount = math.max(1, math.ceil(105 / #customSym))
-						activePattern = string.sub(string.rep(customSym, repeatCount), 1, 110)
+					rawSym = SymbolBox.Text:match("^%s*(.-)%s*$")
+					if rawSym == "" then
+						rawSym = symbolChunks[1]
 					end
 				end
 
-				local fullLine = activePattern .. " " .. targetTag .. baseMsg
+				local reservedSpace = #targetTag + #baseMsg + 2
+				local fittedSym = buildFittedSymbol(rawSym, reservedSpace)
+				local fullLine = fittedSym .. " " .. targetTag .. baseMsg
+
 				sendChat(fullLine)
 				task.wait(delaySec)
 			end
